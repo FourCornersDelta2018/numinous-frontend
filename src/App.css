@@ -1,0 +1,29 @@
+/* base structure */
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+* > h1, h2, h3 {
+    font-family: "Mali", cursive;
+}
+
+* > p {
+    color: #1565c0;
+}
+.footer {
+    background-color: #1565c0;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer > p {
+    color: white;
+}
+
+.logo {
+    width: 80px;
+}
