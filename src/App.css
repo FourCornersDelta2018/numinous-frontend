@@ -12,7 +12,7 @@
     color: #1565c0;
 }
 
-/*_________Navbar______________________________________*/
+/*______________________Navbar______________________________________*/
 
 .navbar {
     background-color: #1565c0;
@@ -20,18 +20,18 @@
     height: 15vh;
     display: flex;
     flex-direction: row;
-    position: fixed;
+    justify-content: space-around;
     top: 0;
     width: 100vw;
     align-items: center;
 }
 
-.pullLeft {
+/* .pullLeft {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding-left: 6%;
-}
+ }*/
 
 .pullRight {
     display: flex;
@@ -45,7 +45,7 @@
     font-family: 'Kaushan Script', cursive;
     font-size: 3.5em;
 }
-/*_________Footer______________________________________*/
+/*_____________________Footer______________________________________*/
 
 .footer {
     background-color: #1565c0;
@@ -63,3 +63,5 @@
 .logo {
     width: 80px;
 }
+
+/* ---------------------TODO----------------------------- */

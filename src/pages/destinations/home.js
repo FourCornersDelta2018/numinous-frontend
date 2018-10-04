@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 
-class Show extends Component {
+class Home extends Component {
   render() {
       return (
-          <div> SHHHHHHOOOOOOOW!!!
+          <div> WOOOOOOO!!!
           </div>
       )
   }
 }
-export default Show
+
+export default Home
