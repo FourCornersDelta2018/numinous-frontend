@@ -20,7 +20,7 @@ class Navbar extends Component {
             <div className="pullLeft">
                 <h1 id="brand">Numinous</h1>
             </div>
-            <div>I am a tag line </div>
+            <div></div>
             <div className="pullRight">
                 {isLoggedIn ? (
                     <div>
