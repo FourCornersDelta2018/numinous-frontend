@@ -9,6 +9,10 @@ class Navbar extends Component {
             isLoggedIn: auth.loggedIn()
         }
     }
+    handleClick = (e) => {
+        let auth = new AuthService()
+        auth.logout()
+    }
   render() {
     const isLoggedIn = this.state.isLoggedIn
     return (
@@ -19,7 +23,7 @@ class Navbar extends Component {
             <div>I am a tag line </div>
             <div className="pullRight">
                 {isLoggedIn ? (
-                    <button>Log Out</button>
+                    <button onClick={this.handleClick}>Log Out</button>
                 ) : (
                     <button>Log In</button>
                 )}
