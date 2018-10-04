@@ -23,10 +23,20 @@ class Navbar extends Component {
             <div>I am a tag line </div>
             <div className="pullRight">
                 {isLoggedIn ? (
-                    <button onClick={this.handleClick}>Log Out</button>
+                    <div>
+                        <a href="/myepic">My Epic</a>
+                        <a href="/" onClick={this.handleClick}>Log Out</a>
+                    </div>
                 ) : (
-                    <button>Log In</button>
+                    <div>
+                        <a href="/registration">Register</a>
+                        <a href="/login">Log In</a>
+                    </div>
                 )}
+                <a href="/about">About Us</a>
+                <a href="javascript:void(0);" className="icon" onClick="myFunction()">
+                    <i className="fa fa-bars"></i>
+                </a>
             </div>
         </div>
     );
