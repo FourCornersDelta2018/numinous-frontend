@@ -68,6 +68,24 @@
     width: 80px;
 }
 
+/*_____________________Home Page______________________________________*/
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+
+/* TODO: Change depending on whether we're going with Flex or Material UI */
+.card {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    background-position: center;
+}
+
+
 /*______________________Show Page______________________________________*/
 
 #map {
@@ -93,5 +111,7 @@
     height: auto;
     width: 100vw;
 }
+
+
 
 /* ---------------------TODO----------------------------- */
