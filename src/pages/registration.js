@@ -44,6 +44,7 @@ class RegistrationPage extends Component {
 						type="password"
 						name="password"
 						value={password}
+						onInput={this.validatePassword}
 						onChange={this.onChange}
 					/>
 					{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
@@ -61,8 +62,19 @@ class RegistrationPage extends Component {
 		this.setState({ form })
 	}
 
+
 	onSubmit = (e) => {
 		e.preventDefault()
+		let hasNumber = /\d/
+		let {email, password} = this.state.form.user
+		console.log(password);
+		if (password.length < 6) {
+			alert ("Password must have at least six characters, jerk!")
+		} else if(!hasNumber.test(password)) {
+			alert ("Password must have a number, jerk!")
+		} else if(password === email) {
+			alert ("Password cannot be email, jerk!")
+		}
 
 		this.auth.register(this.state.form)
 		.then(json => {

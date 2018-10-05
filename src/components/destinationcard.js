@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 class DestinationCard extends Component {
     render() {
-        let {img_path} = this.props.destination
+        let {dest_name, img_path} = this.props.destination
 
         return(
             <div>
-                <img src ={img_path} alt ="picture of destination" />
+                <img src ={img_path} alt = {dest_name} />
             </div>
         )
     }
