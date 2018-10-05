@@ -24,6 +24,8 @@ class Show extends Component {
                 <img src={img_path} alt={dest_name}/>
             </div>
                 <h1>{dest_name}</h1>
+                <h4>{region}</h4>
+                <h4>{country}</h4>
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>
       )
