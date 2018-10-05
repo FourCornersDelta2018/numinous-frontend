@@ -55,7 +55,7 @@
     background-color: #1565c0;
     height: 10vh;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100vw;
 }
@@ -66,6 +66,32 @@
 
 .logo {
     width: 80px;
+}
+
+/*______________________Show Page______________________________________*/
+
+#map {
+    width: 100%;
+    height: 30vh;
+}
+
+#destinationShow {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-attachment: scroll;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: scale-down;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
 }
 
 /* ---------------------TODO----------------------------- */

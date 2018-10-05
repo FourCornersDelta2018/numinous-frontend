@@ -5,7 +5,7 @@ class Footer extends Component {
     return (
       <div className="footer">
       <img className="logo" src="/assets/logo.jpg" alt="logo"/> <br />
-        <p className="pullLeft"> copyright ©2018 Four_Corners </p>
+        <p className="pullLeft"> Copyright ©2018 Four_Corners </p>
 
       </div>
     );

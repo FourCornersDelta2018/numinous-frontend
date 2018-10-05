@@ -17,10 +17,14 @@ class Show extends Component {
     }
     render() {
         let {dest_name, region, country, img_path} = this.state.destination
-      return (
+        let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
+        return (
           <div>
+            <div id="destinationShow">
                 <img src={img_path} alt={dest_name}/>
+            </div>
                 <h1>{dest_name}</h1>
+                <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>
       )
     }
