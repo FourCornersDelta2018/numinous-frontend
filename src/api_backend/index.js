@@ -11,6 +11,14 @@ let getDestinations = function() {
        })
 }
 
+let getDestination = function(id) {
+    return fetch(BASE + `/destinations/${id}`)
+        .then((resp) => {
+            let json = resp.json()
+            console.log(json);
+            return json
+        })
+}
 export  {
-   getDestinations
+   getDestinations, getDestination
 }

@@ -22,14 +22,14 @@ class App extends Component {
                 ? <Switch>
                     <Route exact path="/myepic" component={MyEpic} />
                     <Route exact path="/about" component={About} />
-                    <Route exact path="/show" component={Show} />
+                    <Route exact path="/destinations/:id" component={Show} />
                     <Route path="/" component={Home} />
                 </Switch>
                 : <Switch>
                     <Route exact path="/about" component={About} />
                     <Route exact path="/registration" component={RegistrationPage} />
                     <Route exact path="/login" component={Login} />
-                    <Route exact path="/show" component={Show} />
+                    <Route exact path="/destinations/:id" component={Show} />
                     <Route path="/" component={Home} />
                 </Switch>}
             </Router>
