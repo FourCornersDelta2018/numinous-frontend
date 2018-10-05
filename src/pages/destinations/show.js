@@ -6,18 +6,21 @@ class Show extends Component {
         super(props)
         this.state = {
             destination: {},
-            geoAttribute: ''
+            geography: '',
+            experience: '',
+            language: ''
         }
     }
     componentWillMount() {
         const id = this.props.match.params.id
         getDestination(id)
         .then(destinationInfo => {
-            this.setState({destination:destinationInfo})
+            this.setState({destination:destinationInfo.destination, geography:destinationInfo.geography.geography, experience:destinationInfo.experience.experience, language:destinationInfo.language.language})
         })
     }
     render() {
-        let {dest_name, region, country, img_path} = this.state.destination
+        let { destination, geography, experience, language } = this.state
+        let {dest_name, region, country, img_path} = destination
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
         return (
           <div>
@@ -27,6 +30,9 @@ class Show extends Component {
                 <h1>{dest_name}</h1>
                 <h4>{region}</h4>
                 <h4>{country}</h4>
+                <h4>{geography}</h4>
+                <h4>{experience}</h4>
+                <h4>{language}</h4>
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>
       )
