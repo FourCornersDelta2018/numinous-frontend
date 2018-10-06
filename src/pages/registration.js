@@ -25,7 +25,7 @@ class RegistrationPage extends Component {
 		let { username, email, password } = this.state.form.user
 		return (
 			<main>
-				<h2>Welcome! Register here.</h2>
+				<h2>Welcome! Register and create your Epic today!</h2>
 				<form onSubmit={this.onSubmit}>
 					<input
 						type="text"
@@ -44,7 +44,7 @@ class RegistrationPage extends Component {
 						type="password"
 						name="password"
 						value={password}
-						onInput={this.validatePassword}
+
 						onChange={this.onChange}
 					/>
 					{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
