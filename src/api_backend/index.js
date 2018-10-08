@@ -19,6 +19,23 @@ let getDestination = function(id) {
             return json
         })
 }
+
+let createDestinationUser = function(destination_user) {
+    console.log(destination_user);
+    return fetch(BASE + `/destination_users`, {
+        body: JSON.stringify(destination_user),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: "POST"
+    })
+        .then((resp) => {
+            let json = resp.json()
+            return json
+        })
+}
+
+
 export  {
-   getDestinations, getDestination
+   getDestinations, getDestination, createDestinationUser
 }

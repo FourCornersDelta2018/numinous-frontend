@@ -55,7 +55,8 @@
     background-color: #1565c0;
     height: 10vh;
     display: flex;
-    /* position: fixed; */
+    flex-shrink: 0;
+    position: fixed;
     bottom: 0;
     width: 100vw;
 }
@@ -112,6 +113,27 @@
     width: 100vw;
 }
 
+/* ----------------------MyEpic__________________________ */
 
+container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.column1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.column2 {
+    flex-grow: 2;
+    text-align: center;
+}
+
+.column3 {
+    flex-grow: 1;
+    text-align: center;
+}
 
 /* ---------------------TODO----------------------------- */
