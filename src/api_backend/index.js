@@ -35,7 +35,16 @@ let createDestinationUser = function(destination_user) {
         })
 }
 
+let getSavedDestinations = function(id) {
+    console.log(id);
+    return fetch(BASE + `/destination_users/${id}`)
+        .then((resp) => {
+            let json = resp.json()
+            console.log(json);
+            return json
+        })
+}
 
 export  {
-   getDestinations, getDestination, createDestinationUser
+   getDestinations, getDestination, createDestinationUser, getSavedDestinations
 }
