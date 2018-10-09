@@ -45,6 +45,22 @@ let getSavedDestinations = function(id) {
         })
 }
 
+let unsaveDestination = function(id) {
+    console.log(id);
+    return fetch(BASE + `/destination_users/${id}`, {
+        body: JSON.stringify(id),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: "DELETE"
+        // .then((resp) => {
+        //     let json = resp.json()
+        //     console.log(json);
+        //     return json
+        // })
+    })
+}
+
 export  {
-   getDestinations, getDestination, createDestinationUser, getSavedDestinations
+   getDestinations, getDestination, createDestinationUser, getSavedDestinations, unsaveDestination
 }

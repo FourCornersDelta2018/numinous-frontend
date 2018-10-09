@@ -18,7 +18,7 @@ class Navbar extends Component {
     return (
         <div className="navbar">
             <div className="pullLeft">
-                <h1 id="brand">Numinous</h1>
+                <a href="/"><h1 id="brand">Numinous</h1></a>
             </div>
             <div></div>
             <div className="pullRight">

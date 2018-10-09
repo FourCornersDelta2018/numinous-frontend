@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getDestination, createDestinationUser } from '../../api_backend/index.js'
+import { getDestination, createDestinationUser, unsaveDestination } from '../../api_backend/index.js'
 import AuthService from '../../services'
 
 class Show extends Component {
@@ -12,9 +12,11 @@ class Show extends Component {
             experience: '',
             language: '',
             newDestinationUserSuccess: false,
+            unsaveDestinationSuccess: false,
             user_id: "",
             destination_id: "",
-            isLoggedIn: auth.loggedIn()
+            isLoggedIn: auth.loggedIn(),
+            destinationUserId: props.location.state.id
 
         }
     }
@@ -39,7 +41,7 @@ class Show extends Component {
         })
     }
 
-    handleClick = (e) => {
+    saveHandleClick = (e) => {
         e.preventDefault()
         console.log("newDestinationUser try", this.state.user_id, this.state.destination_id);
         let user_id = this.state.user_id
@@ -53,9 +55,20 @@ class Show extends Component {
         })
     }
 
+    unsaveHandleClick = (e) => {
+        e.preventDefault()
+        console.log("unsaveDestination try", this.state.destinationUserId);
+        unsaveDestination(this.state.destinationUserId)
+        .then(unsaveDestination => {
+            console.log("UnsaveSuccess", unsaveDestination);
+            this.setState({
+                unsaveDestinationSuccess: true
+            })
+        })
+    }
+
     render() {
         const isLoggedIn = this.state.isLoggedIn
-        console.log(this.state.newDestinationUser);
         let { destination, geography, experience, language } = this.state
         let {dest_name, region, country, img_path} = destination
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
@@ -71,7 +84,10 @@ class Show extends Component {
                 <h4>{experience}</h4>
                 <h4>{language}</h4>
                 {isLoggedIn ? (
-                    <button type="submit" onClick={this.handleClick}>Save</button>
+                    <div>
+                        <button type="submit" onClick={this.saveHandleClick}>Save to My Epic</button>
+                        <button type="submit" onClick={this.unsaveHandleClick}>Remove from My Epic </button>
+                    </div>
                 ) : (<div></div>) }
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>
