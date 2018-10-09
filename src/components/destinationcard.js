@@ -19,7 +19,7 @@ class DestinationCard extends Component {
 
         return (
             <div>
-                <img className="card" src={img_path} alt={dest_name} />
+                <img className="card"src={img_path} alt={dest_name} />
             </div>
         )
     }

@@ -21,7 +21,8 @@ class Login extends Component {
     render() {
         let { email, password } = this.state.user
         return (
-            <main>
+            <main className="login">
+                <h4>Sign in with your email and password to see My Epic:</h4>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="email"

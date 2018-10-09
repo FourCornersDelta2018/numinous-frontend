@@ -31,7 +31,7 @@ class MyEpic extends Component {
                 <div className="column1"><h2>Welcome, Fatface!</h2>
                 </div>
 
-                <div className="column2" style={{borderLeft: "2px solid black", borderRight: "2px solid black", height: "500px"}}><h2>This is where you would go if you were not broke!</h2>
+                <div className="column2"><h2>This is where you would go if you were not broke!</h2>
                 {this.state.destinations.map((destination, index) => {
                     return (
                         <Link to={{pathname:`/destinations/${destination.destination_id}`, state:{id:destination.id}}}>
