@@ -1,46 +1,45 @@
-import React, { Component } from 'react';
-import AuthService from '../services'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import Menu from './menu';
 
-class Navbar extends Component {
-    constructor(props){
-        super(props)
-        let auth = new AuthService()
-        this.state = {
-            isLoggedIn: auth.loggedIn()
-        }
-    }
-    handleClick = (e) => {
-        let auth = new AuthService()
-        auth.logout()
-    }
-  render() {
-    const isLoggedIn = this.state.isLoggedIn
-    return (
-        <div className="navbar">
-            <div className="pullLeft">
-                <a href="/"><h1 id="brand">Numinous</h1></a>
-            </div>
-            <div></div>
-            <div className="pullRight">
-                {isLoggedIn ? (
-                    <div>
-                        <a href="/myepic">My Epic</a>
-                        <a href="/" onClick={this.handleClick}>Log Out</a>
-                    </div>
-                ) : (
-                    <div>
-                        <a href="/registration">Register</a>
-                        <a href="/login">Log In</a>
-                    </div>
-                )}
-                <a href="/about">About Us</a>
-                <a href="javascript:void(0);" className="icon" onClick="myFunction()">
-                    <i className="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-    );
-  }
+const styles = {
+  root: {
+    flexGrow: 1,
+  },
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginLeft: -12,
+    marginRight: 20,
+  },
+};
+
+function ButtonAppBar(props) {
+  const { classes } = props;
+  return (
+    <div className={classes.root}>
+      <AppBar position="fixed" >
+        <Toolbar id="blue">
+            <Typography variant="h6" color="inherit" className={classes.grow}>
+              <a id="brand" href="/">Numinous</a>
+            </Typography>
+          <Menu />
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
 
-export default Navbar;
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(ButtonAppBar);

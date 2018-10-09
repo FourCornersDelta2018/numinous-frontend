@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './pages/destinations/home'
 import Navbar from './components/navbar'
-import NavbarNew from './components/navbarnew'
 import AuthService from './services'
 import RegistrationPage from './pages/registration'
 import Login from './pages/login'
@@ -17,7 +16,7 @@ class App extends Component {
       let auth = new AuthService()
     return (
       <div>
-        <NavbarNew />
+        <Navbar />
             <Router>
                 {(auth.loggedIn())
                 ? <Switch>
