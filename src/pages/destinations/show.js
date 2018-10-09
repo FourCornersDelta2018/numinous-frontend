@@ -15,11 +15,9 @@ class Show extends Component {
             unsaveDestinationSuccess: false,
             user_id: "",
             destination_id: "",
-            isLoggedIn: auth.loggedIn(),
-            destinationUserId: props.location.state.id
-
-        }
+            isLoggedIn: auth.loggedIn()        }
     }
+
     grabUserId = () => {
         let auth = new AuthService()
         if (auth.loggedIn()) {
@@ -57,8 +55,10 @@ class Show extends Component {
 
     unsaveHandleClick = (e) => {
         e.preventDefault()
-        console.log("unsaveDestination try", this.state.destinationUserId);
-        unsaveDestination(this.state.destinationUserId)
+        console.log("unsaveDestination try", this.state.user_id, this.state.destination_id);
+        let user_id = this.state.user_id
+        let destination_id = this.state.destination_id
+        unsaveDestination({user_id, destination_id})
         .then(unsaveDestination => {
             console.log("UnsaveSuccess", unsaveDestination);
             this.setState({
