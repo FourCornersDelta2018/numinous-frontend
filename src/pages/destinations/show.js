@@ -5,6 +5,7 @@ import AuthService from '../../services'
 class Show extends Component {
     constructor(props) {
         super(props)
+        let auth = new AuthService()
         this.state = {
             destination: {},
             geography: '',
@@ -12,7 +13,8 @@ class Show extends Component {
             language: '',
             newDestinationUserSuccess: false,
             user_id: "",
-            destination_id: ""
+            destination_id: "",
+            isLoggedIn: auth.loggedIn()
 
         }
     }
@@ -52,6 +54,7 @@ class Show extends Component {
     }
 
     render() {
+        const isLoggedIn = this.state.isLoggedIn
         console.log(this.state.newDestinationUser);
         let { destination, geography, experience, language } = this.state
         let {dest_name, region, country, img_path} = destination
@@ -67,7 +70,9 @@ class Show extends Component {
                 <h4>{geography}</h4>
                 <h4>{experience}</h4>
                 <h4>{language}</h4>
-                <button type="submit" onClick={this.handleClick}>Save</button>
+                {isLoggedIn ? (
+                    <button type="submit" onClick={this.handleClick}>Save</button>
+                ) : (<div></div>) }
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>
       )

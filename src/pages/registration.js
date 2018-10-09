@@ -11,6 +11,7 @@ class RegistrationPage extends Component {
 		this.auth = new AuthService()
 		this.state = {
 			errors: "",
+			success: false,
 			form: {
 				user: {
 					username: "test",
@@ -49,6 +50,7 @@ class RegistrationPage extends Component {
 					/>
 					{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
 					<button onSubmit={this.onSubmit}>Register</button>
+					{this.state.success && <Redirect to="/myepic"/>}
 				</form>
 			</main>
 		)
@@ -82,6 +84,10 @@ class RegistrationPage extends Component {
 			if(json.errors) {
 				this.setState({
 					errors: json.errors
+				})
+			} else {
+				this.setState({
+					success: true
 				})
 			}
 			return json
