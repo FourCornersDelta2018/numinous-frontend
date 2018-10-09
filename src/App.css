@@ -14,57 +14,23 @@
 
 * > a {
     color: white;
+    text-decoration: none;
 }
 
-body {
-    margin-bottom: 11vh;
-    /* background-color:#F0EAD6; */
-}
 
-/*____________________Navbar______________________________*/
-
-.navbar {
+#blue {
     background-color: #1565c0;
-    color: white;
-    height: 15vh;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: space-around; */
-    top: 0;
-    width: 100vw;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    border-style: solid;
-    border-width: thin;
-    border-color: #2c3840;
 }
 
-.pullLeft {
-    display: flex;
-    padding-left: 30px;
-    text-shadow: 1px 1px #2c3840;
-
- }
-
-.pullRight {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    right: 0;
-    padding: 2%;
-}
+/*______________________Navbar______________________________________*/
 
 #brand {
     font-family: 'Kaushan Script', cursive;
-    font-size: 3.5em;
-    padding-left: 55px;
-    text-shadow: 2px 2px #2c3840;
+    font-size: 2.5em;
 }
-
-a:link {
-    text-decoration: none;
+body {
+    margin-bottom: 11vh;
+    /* background-color:#F0EAD6; */
 }
 /*_____________________Footer____________________________*/
 
@@ -72,7 +38,10 @@ a:link {
     background-color: #1565c0;
     height: 10vh;
     display: flex;
+
+    flex-shrink: 0;
     position: fixed;
+
     bottom: 0;
     width: 100vw;
     border-style: solid;
