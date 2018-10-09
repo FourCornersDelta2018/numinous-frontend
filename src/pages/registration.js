@@ -25,8 +25,8 @@ class RegistrationPage extends Component {
 	render() {
 		let { username, email, password } = this.state.form.user
 		return (
-			<main>
-				<h2>Welcome! Register and create your Epic today!</h2>
+			<main className="register">
+				<h4>Welcome! Sign up here to create your own My Epic page:</h4>
 				<form onSubmit={this.onSubmit}>
 					<input
 						type="text"

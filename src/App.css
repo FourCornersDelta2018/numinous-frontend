@@ -1,4 +1,4 @@
-/* base structure */
+/*-------------base structure---------------*/
 * {
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
@@ -17,6 +17,7 @@
     text-decoration: none;
 }
 
+
 #blue {
     background-color: #1565c0;
 }
@@ -27,16 +28,25 @@
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
 }
-/*_____________________Footer______________________________________*/
+body {
+    margin-bottom: 11vh;
+    /* background-color:#F0EAD6; */
+}
+/*_____________________Footer____________________________*/
 
 .footer {
     background-color: #1565c0;
     height: 10vh;
     display: flex;
+
     flex-shrink: 0;
-    /* position: fixed; */
+    position: fixed;
+
     bottom: 0;
     width: 100vw;
+    border-style: solid;
+    border-width: thin;
+    border-color: #2c3840;
 }
 
 .footer > p {
@@ -47,13 +57,14 @@
     width: 80px;
 }
 
-/*_____________________Home Page______________________________________*/
+/*___________________Home Page__________________________*/
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-
+    justify-content: center;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
 }
 
 /* TODO: Change depending on whether we're going with Flex or Material UI */
@@ -62,14 +73,24 @@
     width: 300px;
     object-fit: cover;
     background-position: center;
+    border-style: solid;
+    border-color: #2c3840;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px #666666;
 }
 
 
-/*______________________Show Page______________________________________*/
+/*______________________Show Page___________________________*/
 
 #map {
-    width: 100%;
-    height: 30vh;
+    width: 100vw;
+    height: 80vh;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #destinationShow {
@@ -89,19 +110,28 @@
     align-items: center;
     height: auto;
     width: 100vw;
+    margin-bottom: 11vh;
 }
 
-/* ----------------------MyEpic__________________________ */
+/* -----------------MyEpic------------------*/
+
+body {
+    margin-bottom: 20vh;
+}
 
 container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    padding-top: 100px;
 }
 
 .column1 {
     flex-grow: 1;
     text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: #43a047;
 }
 
 .column2 {
@@ -112,6 +142,26 @@ container {
 .column3 {
     flex-grow: 1;
     text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    background-color: #43a047;
+}
+/* ------------------Login----------------------------- */
+.login {
+    padding-top: 100px;
+    padding-left: 25px;
 }
 
+/* ------------------Register----------------------------- */
+.register {
+    padding-top: 100px;
+    padding-left: 25px;
+}
+
+/* ------------------About----------------------------- */
+.about {
+    padding-top: 100px;
+    padding-left: 25px;
+}
 /* ---------------------TODO----------------------------- */
