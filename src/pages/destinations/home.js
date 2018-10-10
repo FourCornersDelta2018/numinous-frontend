@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { getDestinations } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
 import { Link } from 'react-router-dom'
-// Material UI import
 
 
 class Home extends Component {

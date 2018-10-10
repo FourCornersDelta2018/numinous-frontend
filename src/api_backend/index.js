@@ -45,6 +45,17 @@ let getSavedDestinations = function(id) {
         })
 }
 
+let unsaveDestination = function(id) {
+    console.log("Made it to apibackend", id.user_id, id.destination_id);
+    return fetch(BASE + `/destination_users/${id.user_id}`, {
+        body: JSON.stringify(id),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        method: "DELETE"
+    })
+}
+
 export  {
-   getDestinations, getDestination, createDestinationUser, getSavedDestinations
+   getDestinations, getDestination, createDestinationUser, getSavedDestinations, unsaveDestination
 }
