@@ -25,7 +25,8 @@ class RegistrationPage extends Component {
 	render() {
 		let { username, email, password } = this.state.form.user
 		return (
-			<div> <img className="backgroundRegister" src="/assets/Awesome-Beach-Background.jpg" alt="beach scene"/>
+			<div>
+				<div className="backgroundRegister"></div>
 				<main className="register">
 					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
 					<form onSubmit={this.onSubmit}>
@@ -51,7 +52,7 @@ class RegistrationPage extends Component {
 						/>
 						{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
 						<button onSubmit={this.onSubmit}>Register</button>
-						{this.state.success && <Redirect to="/myepic"/>}
+						{this.state.success && <Redirect to="/pages/destinations/myepic"/>}
 					</form>
 				</main>
 			</div>

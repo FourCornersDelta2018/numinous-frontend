@@ -17,11 +17,13 @@
     text-decoration: none;
 }
 
-
 #blue {
     background-color: #1565c0;
 }
 
+body {
+    padding-top: 13vh;
+}
 /*______________________Navbar________________________________*/
 
 #brand {
@@ -31,10 +33,7 @@
     padding-left: 50px;
 
 }
-body {
-    margin-bottom: 11vh;
-    /* background-color:#F0EAD6; */
-}
+
 /*_____________________Footer____________________________*/
 
 .footer {
@@ -71,7 +70,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 16vh;
+    padding-top: 20vh;
     padding-bottom: 10vh;
     position: absolute;
     top: 0px;
@@ -237,8 +236,9 @@ arrow-down {
   height: auto;
   padding: 1rem;
   text-align: center;
-  
-  
+}
+
+
 #destinationShow {
     background-size: cover;
     -webkit-background-size: cover;
@@ -305,11 +305,17 @@ container {
 }
 
 .backgroundLogin {
-    width: 100%;
-    height: 100%;
+    background-image: url("/assets/riceterrace.jpg");
+    width: auto;
+    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
     opacity: 0.5;
 }
 
@@ -322,18 +328,42 @@ container {
     left: 0px;
 }
 .backgroundRegister {
-    width: 100%;
-    height: 100%;
-    background-position: center;
+    background-image: url("/assets/telluride.jpg");
+    width: auto;
+    height: 100vh;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed 100%;
-    opacity: 0.3;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+    opacity: 0.5;
 }
 
 /* ------------------About----------------------------- */
 .about {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.backgroundAbout {
+    background-image: url("/assets/beach.jpg");
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+    opacity: 0.5;
 }
 /* ---------------------TODO----------------------------- */
