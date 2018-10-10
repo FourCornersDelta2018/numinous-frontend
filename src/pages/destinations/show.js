@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getDestination, createDestinationUser, unsaveDestination } from '../../api_backend/index.js'
 import AuthService from '../../services'
+import AttributeCard from '../../components/attributecard'
 
 class Show extends Component {
     constructor(props) {
@@ -71,18 +72,25 @@ class Show extends Component {
         const isLoggedIn = this.state.isLoggedIn
         let { destination, geography, experience, language } = this.state
         let {dest_name, region, country, img_path} = destination
+        let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
+
         return (
-          <div>
-            <div id="destinationShow">
-                <img src={img_path} alt={dest_name}/>
+          <div className="flex-column">
+            <div className="background" style={{backgroundImage:`url(${img_path})`}}>
+                <arrow-down class="bounce">
+                  <img width="40" height="40" src="/assets/icon-arrow_dropdown.svg" alt="Down Arrow" />
+                </arrow-down>
             </div>
-                <h1>{dest_name}</h1>
-                <h4>{region}</h4>
-                <h4>{country}</h4>
-                <h4>{geography}</h4>
-                <h4>{experience}</h4>
-                <h4>{language}</h4>
+            <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
+              <h1 style={{marginBottom: "0"}}>{dest_name}</h1>
+              <h4 style={{marginBottom: "2rem"}}>{location}</h4>
+              <div id="attribute-row">
+                <AttributeCard type="geography" attribute={geography}/>
+                <AttributeCard type="experience" attribute={experience}/>
+                <AttributeCard type="language" attribute={language}/>
+              </div>
+            </div>
                 {isLoggedIn ? (
                     <div>
                         <button type="submit" onClick={this.saveHandleClick}>Save to My Epic</button>

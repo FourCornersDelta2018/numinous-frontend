@@ -17,21 +17,23 @@
     text-decoration: none;
 }
 
-
 #blue {
     background-color: #1565c0;
 }
 
-/*______________________Navbar______________________________________*/
+body {
+    padding-top: 13vh;
+}
+/*______________________Navbar________________________________*/
 
 #brand {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
+    text-shadow: 1px 1px #2c3840;
+    padding-left: 50px;
+
 }
-body {
-    margin-bottom: 11vh;
-    /* background-color:#F0EAD6; */
-}
+
 /*_____________________Footer____________________________*/
 
 .footer {
@@ -57,14 +59,22 @@ body {
     width: 80px;
 }
 
+.pullLeft {
+    padding-left: 25px;
+    text-shadow: 1px 1px #2c3840;
+}
+
 /*___________________Home Page__________________________*/
 
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 16vh;
+    padding-top: 20vh;
     padding-bottom: 10vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 /* TODO: Change depending on whether we're going with Flex or Material UI */
@@ -79,6 +89,15 @@ body {
     box-shadow: 2px 2px 5px #666666;
 }
 
+.backgroundHome {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.5;
+}
 
 /*______________________Show Page___________________________*/
 
@@ -92,6 +111,133 @@ body {
     align-items: center;
 
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#attribute-section {
+  padding: 3rem 2rem 4rem 2rem;
+}
+
+#attribute-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.background {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: scale-down;
+  height: 100vh;
+  width: auto;
+}
+
+.inline {
+  display: inline;
+}
+
+/* Arrow down */
+
+arrow-down {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1rem;
+}
+
+.bounce {
+  -moz-animation: bounmodal-imgfinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+
+.circle {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #1565c0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+#attribute-icon {
+  width: 100px;
+  height: 100px;
+}
+
+#textbox {
+  width: 300px;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
 
 #destinationShow {
     background-size: cover;
@@ -110,6 +256,8 @@ body {
     align-items: center;
     height: auto;
     width: 100vw;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
     margin-bottom: 11vh;
 }
 
@@ -151,18 +299,72 @@ container {
 .login {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.backgroundLogin {
+    background-image: url("/assets/riceterrace.jpg");
+    width: auto;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+    opacity: 0.5;
 }
 
 /* ------------------Register----------------------------- */
 .register {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.backgroundRegister {
+    background-image: url("/assets/telluride.jpg");
+    width: auto;
+    height: 100vh;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+    opacity: 0.5;
 }
 
 /* ------------------About----------------------------- */
 .about {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.backgroundAbout {
+    background-image: url("/assets/beach.jpg");
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+    opacity: 0.5;
 }
 /* ---------------------TODO----------------------------- */
 

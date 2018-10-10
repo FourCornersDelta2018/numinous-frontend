@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 class About extends Component {
   render() {
       return (
+
         <div>
           <div className="box1">
              <div className="column01">
@@ -10,6 +11,7 @@ class About extends Component {
                <h3>Four Corners</h3>
                <p>From the four corners of the United States, Four Corners: Queer Eye for the Straight Girl is comprised of four lovely Delta Unicorns, all (soon-to-be) graduates of the LEARN Academy in San Diego, CA.</p>
              </div>
+    
           </div>
           <div className="box1">
              <div className="column02">

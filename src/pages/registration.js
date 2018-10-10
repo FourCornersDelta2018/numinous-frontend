@@ -25,34 +25,37 @@ class RegistrationPage extends Component {
 	render() {
 		let { username, email, password } = this.state.form.user
 		return (
-			<main className="register">
-				<h4>Welcome! Sign up here to create your own My Epic page:</h4>
-				<form onSubmit={this.onSubmit}>
-					<input
-						type="text"
-						name="username"
-						value={username}
-						onChange={this.onChange}
-					/>
-					<input
-						type="email"
-						name="email"
-						value={email}
-						onChange={this.onChange}
-					/>
-					{this.state.errors.email && <div>Error: Email  {this.state.errors.email[0]}</div>}
-					<input
-						type="password"
-						name="password"
-						value={password}
+			<div>
+				<div className="backgroundRegister"></div>
+				<main className="register">
+					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
+					<form onSubmit={this.onSubmit}>
+						<input
+							type="text"
+							name="username"
+							value={username}
+							onChange={this.onChange}
+						/>
+						<input
+							type="email"
+							name="email"
+							value={email}
+							onChange={this.onChange}
+						/>
+						{this.state.errors.email && <div>Error: Email  {this.state.errors.email[0]}</div>}
+						<input
+							type="password"
+							name="password"
+							value={password}
 
-						onChange={this.onChange}
-					/>
-					{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
-					<button onSubmit={this.onSubmit}>Register</button>
-					{this.state.success && <Redirect to="/myepic"/>}
-				</form>
-			</main>
+							onChange={this.onChange}
+						/>
+						{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
+						<button onSubmit={this.onSubmit}>Register</button>
+						{this.state.success && <Redirect to="/pages/destinations/myepic"/>}
+					</form>
+				</main>
+			</div>
 		)
 	}
 
