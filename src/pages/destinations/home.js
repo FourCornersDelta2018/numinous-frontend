@@ -3,7 +3,7 @@ import { getDestinations } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
 import { Link } from 'react-router-dom'
 // Material UI import
-import Grid from './grid'
+
 
 class Home extends Component {
     constructor(props){
