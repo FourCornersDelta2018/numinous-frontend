@@ -367,3 +367,51 @@ container {
     opacity: 0.5;
 }
 /* ---------------------TODO----------------------------- */
+
+/* --------------------About Us---------------------------*/
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.box1 {
+  width: 700px;
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-spacing: 0px 15px;
+  border: 2px solid #1565c0;
+  border-radius: 10px;
+}
+.box1 img {
+  width: 150px;
+  height: 150px;
+}
+.column01 img {
+ float: left;
+ margin-right: 10px;
+ text-align: right;
+ border-radius: 10px 0px 0px 10px;
+}
+.column02 img {
+ float: right;
+ margin-left: 10px;
+ text-align: left;
+ border-radius: 0px 10px 10px 0px;
+}
+.column01 p, h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.column02 p, h3 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Clear floats after image containers */
+/* .row::after {
+ content: "";
+ height: 150px;
+ clear: both;
+ display: table;
+ padding-left: 100px;
+ padding-right: 100px;
+} */
