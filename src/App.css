@@ -22,11 +22,14 @@
     background-color: #1565c0;
 }
 
-/*______________________Navbar______________________________________*/
+/*______________________Navbar________________________________*/
 
 #brand {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
+    text-shadow: 1px 1px #2c3840;
+    padding-left: 50px;
+
 }
 body {
     margin-bottom: 11vh;
@@ -57,6 +60,11 @@ body {
     width: 80px;
 }
 
+.pullLeft {
+    padding-left: 25px;
+    text-shadow: 1px 1px #2c3840;
+}
+
 /*___________________Home Page__________________________*/
 
 .container {
@@ -65,6 +73,9 @@ body {
     justify-content: center;
     padding-top: 16vh;
     padding-bottom: 10vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 /* TODO: Change depending on whether we're going with Flex or Material UI */
@@ -79,6 +90,15 @@ body {
     box-shadow: 2px 2px 5px #666666;
 }
 
+.backgroundHome {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    /* background-repeat: repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.5;
+}
 
 /*______________________Show Page___________________________*/
 
@@ -110,6 +130,8 @@ body {
     align-items: center;
     height: auto;
     width: 100vw;
+    padding-top: 16vh;
+    padding-bottom: 10vh;
     margin-bottom: 11vh;
 }
 
@@ -151,12 +173,36 @@ container {
 .login {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.backgroundLogin {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
 }
 
 /* ------------------Register----------------------------- */
 .register {
     padding-top: 100px;
     padding-left: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.backgroundRegister {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed 100%;
+    opacity: 0.3;
 }
 
 /* ------------------About----------------------------- */
