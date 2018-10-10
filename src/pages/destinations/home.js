@@ -23,7 +23,8 @@ class Home extends Component {
 
     render() {
         return (
-            <div> <img className="backgroundHome" src="/assets/oldmap.jpg" alt="vintage map"/>
+            <div>
+                <div className="backgroundHome"></div> 
                 <div className="container">
                     {this.state.destinations.map((destination, index) => {
                         return (

@@ -108,12 +108,17 @@ body {
 }
 
 .backgroundHome {
-    width: 100%;
-    height: 100%;
+    background-image: url("/assets/temple.jpg");
+    width: auto;
+    height: 100vh;
     background-position: center;
-    /* background-repeat: repeat; */
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
     opacity: 0.5;
 }
 
@@ -161,7 +166,7 @@ body {
   display: inline;
 }
 
-/* Arrow down */
+/*--------------Arrow down-------------*/
 
 arrow-down {
   position: absolute;
@@ -313,6 +318,7 @@ container {
     padding-top: 100px;
     padding-left: 25px;
     position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
 }
@@ -321,7 +327,7 @@ container {
     background-image: url("/assets/riceterrace.jpg");
     width: auto;
     height: 100vh;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -337,6 +343,7 @@ container {
     padding-top: 100px;
     padding-left: 25px;
     position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
 }
@@ -344,6 +351,7 @@ container {
     background-image: url("/assets/telluride.jpg");
     width: auto;
     height: 100vh;
+    overflow-x: hidden;
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -383,48 +391,44 @@ container {
 
 /* --------------------About Us---------------------------*/
 
-/* Three image containers (use 25% for four, and 50% for two, etc) */
-.box1 {
-  width: 700px;
-  height: 160px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  border-spacing: 0px 15px;
-  border: 2px solid #1565c0;
-  border-radius: 10px;
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 740px;
+  margin: 0 auto;
 }
-.box1 img {
-  width: 150px;
+.logo-section img {
+  margin-left: 16%;
+  margin-right: 16%;
+}
+section {
+  max-width: 740px;
+  margin: 0 auto;
+  display: flex;
+}
+.column-z {
+  width: 100%;
+  margin: 2px;
+}
+.column-x {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.column-y {
+  margin: 10px;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 50%;
+}
+.column-x img {
+  align-items: center;
+  justify-content: center;
+}
+.column-y img {
   height: 150px;
-}
-.column01 img {
- float: left;
- margin-right: 10px;
- text-align: right;
- border-radius: 10px 0px 0px 10px;
-}
-.column02 img {
- float: right;
- margin-left: 10px;
- text-align: left;
- border-radius: 0px 10px 10px 0px;
-}
-.column01 p, h3 {
-  margin-left: 10px;
+  width: 150px;
+  float: left;
   margin-right: 10px;
 }
-.column02 p, h3 {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-/* Clear floats after image containers */
-/* .row::after {
- content: "";
- height: 150px;
- clear: both;
- display: table;
- padding-left: 100px;
- padding-right: 100px;
-} */
