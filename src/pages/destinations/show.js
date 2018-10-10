@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getDestination, createDestinationUser, unsaveDestination } from '../../api_backend/index.js'
 import AuthService from '../../services'
+import AttributeCard from '../../components/attributecard'
 
 class Show extends Component {
     constructor(props) {
@@ -73,6 +74,7 @@ class Show extends Component {
         let {dest_name, region, country, img_path} = destination
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
+
         return (
           <div className="flex-column">
             <div className="background" style={{backgroundImage:`url(${img_path})`}}>
@@ -83,10 +85,10 @@ class Show extends Component {
             <div className="flex-column" style={{alignItems: "center"}}>
               <h1>{dest_name}</h1>
               <h4>{location}</h4>
-              <div>
-                <h4>{geography}</h4>
-                <h4>{experience}</h4>
-                <h4>{language}</h4>
+              <div className="flex-row">
+                <AttributeCard attribute={geography}/>
+                <AttributeCard attribute={experience}/>
+                <AttributeCard attribute={language}/>
               </div>
             </div>
                 {isLoggedIn ? (

@@ -99,6 +99,12 @@ body {
   justify-content: center;
 }
 
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .background {
   background-size: cover;
   -webkit-background-size: cover;
@@ -182,6 +188,22 @@ arrow-down {
   }
 }
 
+.circle {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #1565c0;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 400px;
+  text-align: center;
+}
+
+#textbox {
+  width: 300px;
+  height: auto;
+  padding: 1rem;
+  text-align: center;
+}
 
 /* -----------------MyEpic------------------*/
 
