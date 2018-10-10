@@ -82,13 +82,13 @@ class Show extends Component {
                   <img width="40" height="40" src="/assets/icon-arrow_dropdown.svg" alt="Down Arrow" />
                 </arrow-down>
             </div>
-            <div className="flex-column" style={{alignItems: "center"}}>
-              <h1>{dest_name}</h1>
-              <h4>{location}</h4>
-              <div className="flex-row">
-                <AttributeCard attribute={geography}/>
-                <AttributeCard attribute={experience}/>
-                <AttributeCard attribute={language}/>
+            <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
+              <h1 style={{marginBottom: "0"}}>{dest_name}</h1>
+              <h4 style={{marginBottom: "2rem"}}>{location}</h4>
+              <div id="attribute-row">
+                <AttributeCard type="geography" attribute={geography}/>
+                <AttributeCard type="experience" attribute={experience}/>
+                <AttributeCard type="language" attribute={language}/>
               </div>
             </div>
                 {isLoggedIn ? (
