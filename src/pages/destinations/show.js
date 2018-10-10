@@ -71,18 +71,24 @@ class Show extends Component {
         const isLoggedIn = this.state.isLoggedIn
         let { destination, geography, experience, language } = this.state
         let {dest_name, region, country, img_path} = destination
+        let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
         return (
-          <div>
-            <div id="destinationShow">
-                <img src={img_path} alt={dest_name}/>
+          <div className="flex-column">
+            <div className="background" style={{backgroundImage:`url(${img_path})`}}>
+                <arrow-down class="bounce">
+                  <img width="40" height="40" src="/assets/icon-arrow_dropdown.svg" alt="Down Arrow" />
+                </arrow-down>
             </div>
-                <h1>{dest_name}</h1>
-                <h4>{region}</h4>
-                <h4>{country}</h4>
+            <div className="flex-column" style={{alignItems: "center"}}>
+              <h1>{dest_name}</h1>
+              <h4>{location}</h4>
+              <div>
                 <h4>{geography}</h4>
                 <h4>{experience}</h4>
                 <h4>{language}</h4>
+              </div>
+            </div>
                 {isLoggedIn ? (
                     <div>
                         <button type="submit" onClick={this.saveHandleClick}>Save to My Epic</button>
