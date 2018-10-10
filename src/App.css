@@ -42,7 +42,7 @@ body {
   justify-content: center;
 }
 
-/*______________________Navbar________________________________*/
+/*______________________Navbar____________________________*/
 
 #brand {
     font-family: 'Kaushan Script', cursive;
@@ -74,7 +74,7 @@ body {
 }
 
 .logo {
-    width: 80px;
+    width: 65px;
 }
 
 .pullLeft {
@@ -91,6 +91,7 @@ body {
     padding-top: 20vh;
     padding-bottom: 10vh;
     position: absolute;
+    /* background-color: transparent; */
     top: 0px;
     left: 0px;
 }
@@ -107,12 +108,13 @@ body {
     box-shadow: 2px 2px 5px #666666;
 }
 
-.backgroundHome {
+#backgroundHome {
     background-image: url("/assets/temple.jpg");
     width: auto;
     height: 100vh;
+    z-index: auto|-1|initial|inherit;
     background-position: center;
-    background-repeat: no-repeat;
+    /* background-repeat: repeat; */
     background-size: cover;
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -281,9 +283,9 @@ arrow-down {
 
 /* -----------------MyEpic------------------*/
 
-body {
+/* body {
     margin-bottom: 20vh;
-}
+} */
 
 container {
     display: flex;
@@ -356,7 +358,7 @@ container {
     background-image: url("/assets/telluride.jpg");
     width: auto;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
