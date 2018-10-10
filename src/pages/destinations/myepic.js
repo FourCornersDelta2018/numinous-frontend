@@ -3,12 +3,19 @@ import AuthService from '../../services'
 import { getSavedDestinations } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
 import { Link } from 'react-router-dom'
+import Avatar from '@material-ui/core/Avatar';
 
 class MyEpic extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            destinations: []
+            destinations: [],
+            styling: {
+              bigAvatar: {
+                width: 200,
+                height: 200,
+              }
+            }
         }
     }
 
@@ -27,8 +34,13 @@ class MyEpic extends Component {
   render() {
       return (
           <container>
-
-                <div className="column1"><h2>Welcome, Fatface!</h2>
+                <div className="column1">
+                <h2>Welcome, Fatface!</h2>
+                <Avatar
+                  alt="Adelle Charles"
+                  src="/assets/avatar.png"
+                  style={this.state.styling.bigAvatar}
+                />
                 </div>
 
                 <div className="column2"><h2>This is where you would go if you were not broke!</h2>

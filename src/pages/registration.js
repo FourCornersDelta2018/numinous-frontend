@@ -61,9 +61,7 @@ class RegistrationPage extends Component {
 
 	onChange = (e) => {
 		let { form } = this.state
-
 		form.user[e.target.name] = e.target.value
-
 		this.setState({ form })
 	}
 
