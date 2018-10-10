@@ -25,7 +25,7 @@ class RegistrationPage extends Component {
 	render() {
 		let { username, email, password } = this.state.form.user
 		return (
-			<div>
+			<div style={{overflow: 'hidden'}}>
 				<div className="backgroundRegister"></div>
 				<main className="register">
 					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
