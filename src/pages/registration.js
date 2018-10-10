@@ -28,20 +28,20 @@ class RegistrationPage extends Component {
 			<main>
 				<h2>Welcome! Register and create your Epic today!</h2>
 				<form onSubmit={this.onSubmit}>
-					<input
+					<input id= "username"
 						type="text"
 						name="username"
 						value={username}
 						onChange={this.onChange}
 					/>
-					<input
+				<input id = "email"
 						type="email"
 						name="email"
 						value={email}
 						onChange={this.onChange}
 					/>
 					{this.state.errors.email && <div>Error: Email  {this.state.errors.email[0]}</div>}
-					<input
+					<input id= "password"
 						type="password"
 						name="password"
 						value={password}
@@ -50,8 +50,9 @@ class RegistrationPage extends Component {
 					/>
 					{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
 					<button onSubmit={this.onSubmit}>Register</button>
-					{this.state.success && <Redirect to="/myepic"/>}
+					{this.state.success && <Redirect to="/pages/destinations/home"/>}
 				</form>
+
 			</main>
 		)
 	}

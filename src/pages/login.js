@@ -23,24 +23,25 @@ class Login extends Component {
         return (
             <main>
                 <form onSubmit={this.handleSubmit}>
-                    <input
+                    <input id="email"
                         type="email"
                         placeholder="Email"
                         name="email"
                         value={email}
                         onChange={this.handleChange}
                     />
-                    <input
+                  <input id = "password"
                         type="password"
                         placeholder="Password"
                         name="password"
                         value={password}
                         onChange={this.handleChange}
                     />
-                    <input
+                  <input id= "submit"
                         type="submit"
                         value="Login"
                     />
+                  {this.state.success && <Redirect to="/pages/destinations/myepic"/>}
                 </form>
             </main>
         )
@@ -70,6 +71,7 @@ class Login extends Component {
         this.auth.login(this.state)
         .then(json => {
 			console.log("handling any errors");
+
 			if(json.errors) {
 				this.setState({
 					errors: json.errors
