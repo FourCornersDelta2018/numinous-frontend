@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom'
 import AuthService from '../services'
 import Navbar from '../components/navbar'
 
+import Button from '@material-ui/core/Button';
+
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -40,10 +42,7 @@ class Login extends Component {
                             value={password}
                             onChange={this.handleChange}
                         />
-                        <input
-                            type="submit"
-                            value="Login"
-                        />
+                        <Button variant="contained" id="button" type="submit">Log In</Button>
                     </form>
                 </main>
             </div>

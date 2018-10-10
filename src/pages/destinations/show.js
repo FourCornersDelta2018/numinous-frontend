@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getDestination, createDestinationUser, unsaveDestination } from '../../api_backend/index.js'
 import AuthService from '../../services'
 import AttributeCard from '../../components/attributecard'
+import Button from '@material-ui/core/Button';
 
 class Show extends Component {
     constructor(props) {
@@ -92,9 +93,9 @@ class Show extends Component {
               </div>
             </div>
                 {isLoggedIn ? (
-                    <div>
-                        <button type="submit" onClick={this.saveHandleClick}>Save to My Epic</button>
-                        <button type="submit" onClick={this.unsaveHandleClick}>Remove from My Epic </button>
+                    <div className="flex-row" style={{paddingBottom: "2rem"}}>
+                        <Button variant="contained" id="button" type="submit" onClick={this.saveHandleClick}>Save to My Epic</Button>
+                        <Button variant="contained" id="button" type="submit" onClick={this.unsaveHandleClick}>Remove from My Epic </Button>
                     </div>
                 ) : (<div></div>) }
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>

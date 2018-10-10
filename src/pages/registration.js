@@ -4,6 +4,8 @@ import { Redirect, Link } from 'react-router-dom'
 import AuthService from '../services'
 import Navbar from '../components/navbar'
 
+import Button from '@material-ui/core/Button';
+
 class RegistrationPage extends Component {
 	constructor(props) {
 		super(props)
@@ -51,7 +53,7 @@ class RegistrationPage extends Component {
 							onChange={this.onChange}
 						/>
 						{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
-						<button onSubmit={this.onSubmit}>Register</button>
+						<Button variant="contained" id="button" type="submit" onSubmit={this.onSubmit}>Register</Button>
 						{this.state.success && <Redirect to="/pages/destinations/myepic"/>}
 					</form>
 				</main>

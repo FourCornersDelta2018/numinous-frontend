@@ -21,9 +21,27 @@
     background-color: #1565c0;
 }
 
+#button {
+    background-color: #43a047;
+    color: white;
+    margin: 2rem;
+}
+
 body {
     padding-top: 13vh;
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+}
+
 /*______________________Navbar________________________________*/
 
 #brand {
@@ -112,11 +130,6 @@ body {
 
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 #attribute-section {
   padding: 3rem 2rem 4rem 2rem;
