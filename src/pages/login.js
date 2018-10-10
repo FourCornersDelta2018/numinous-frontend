@@ -19,29 +19,29 @@ class Login extends Component {
     }
 
     render() {
+      console.log(this.state.success);
         let { email, password } = this.state.user
         return (
-            <main>
+            <main className="login">
+                <h4>Sign in with your email and password to see My Epic:</h4>
                 <form onSubmit={this.handleSubmit}>
-                    <input id="email"
+                    <input
                         type="email"
                         placeholder="Email"
                         name="email"
                         value={email}
                         onChange={this.handleChange}
                     />
-                  <input id = "password"
+                    <input
                         type="password"
                         placeholder="Password"
                         name="password"
                         value={password}
                         onChange={this.handleChange}
                     />
-                  <input id= "submit"
-                        type="submit"
-                        value="Login"
-                    />
-                  {this.state.success && <Redirect to="/pages/destinations/myepic"/>}
+                  <button id = "submit" onSubmit={this.onSubmit}>Log In</button>
+          					{this.state.success && <Redirect to="/myepic"/>}
+
                 </form>
             </main>
         )
@@ -71,15 +71,20 @@ class Login extends Component {
         this.auth.login(this.state)
         .then(json => {
 			console.log("handling any errors");
-
 			if(json.errors) {
 				this.setState({
 					errors: json.errors
+        })
+        } else {
+          this.setState({
+            success: true
 				})
+        this.props.history.push(`/myepic`)
+
 			}
 			return json
 		})
-    }
+  }
 }
 
 export default Login
