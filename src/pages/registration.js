@@ -4,6 +4,9 @@ import { Redirect, Link } from 'react-router-dom'
 import AuthService from '../services'
 import Navbar from '../components/navbar'
 
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
 class RegistrationPage extends Component {
 	constructor(props) {
 		super(props)
@@ -14,9 +17,18 @@ class RegistrationPage extends Component {
 			success: false,
 			form: {
 				user: {
-					username: "test",
-					email: "test@example.com",
-					password: "123134",
+					username: "",
+					email: "",
+					password: "",
+				}
+			},
+			styling: {
+				container: {
+					display: 'flex',
+					flexWrap: 'wrap',
+				},
+				textField: {
+					width: 200
 				}
 			}
 		}
@@ -25,33 +37,39 @@ class RegistrationPage extends Component {
 	render() {
 		let { username, email, password } = this.state.form.user
 		return (
-			<div style={{overflow: 'hidden'}}>
+			<div>
+				<div style={this.state.styling.container} className="backgroundRegister"></div>
 				<div className="backgroundRegister"></div>
 				<main className="register">
 					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
-					<form onSubmit={this.onSubmit}>
-						<input
-							type="text"
+					<form className="flex-column" onSubmit={this.onSubmit}>
+						<TextField className={this.state.styling.textField}
+							id="standard-with-placeholder"
+							label="Username"
 							name="username"
+							placeholder="Username"
 							value={username}
-							onChange={this.onChange}
+							onChange={this.handleChange}
 						/>
-						<input
-							type="email"
+						<TextField className={this.state.styling.textField}
+							id="standard-with-placeholder"
+							label="Email"
 							name="email"
+							placeholder="Email"
 							value={email}
-							onChange={this.onChange}
+							onChange={this.handleChange}
 						/>
 						{this.state.errors.email && <div>Error: Email  {this.state.errors.email[0]}</div>}
-						<input
-							type="password"
+						<TextField className={this.state.styling.textField}
+							id="standard-with-placeholder"
+							label="Password"
 							name="password"
+							placeholder="Password"
 							value={password}
-
-							onChange={this.onChange}
+							onChange={this.handleChange}
 						/>
 						{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
-						<button onSubmit={this.onSubmit}>Register</button>
+						<Button variant="contained" id="button" type="submit" onSubmit={this.onSubmit}>Register</Button>
 						{this.state.success && <Redirect to="/pages/destinations/myepic"/>}
 					</form>
 				</main>
@@ -59,11 +77,9 @@ class RegistrationPage extends Component {
 		)
 	}
 
-	onChange = (e) => {
+	handleChange = (e) => {
 		let { form } = this.state
-
 		form.user[e.target.name] = e.target.value
-
 		this.setState({ form })
 	}
 

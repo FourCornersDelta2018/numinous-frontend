@@ -4,6 +4,9 @@ import { Redirect } from 'react-router-dom'
 import AuthService from '../services'
 import Navbar from '../components/navbar'
 
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -14,6 +17,15 @@ class Login extends Component {
             user: {
                 email: "",
                 password: ""
+            },
+            styling: {
+              container: {
+                display: 'flex',
+                flexWrap: 'wrap',
+              },
+              textField: {
+                width: 200
+              }
             }
         }
     }
@@ -22,28 +34,27 @@ class Login extends Component {
         let { email, password } = this.state.user
         return (
             <div>
-                <div className="backgroundLogin"></div>
+                <div style={this.state.styling.container} className="backgroundLogin"></div>
                 <main className="login">
                     <h4>Sign in with your email and password to see My Epic:</h4>
-                    <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            name="email"
-                            value={email}
-                            onChange={this.handleChange}
+                    <form className="flex-column" onSubmit={this.handleSubmit}>
+                        <TextField className={this.state.styling.textField}
+                          id="standard-with-placeholder"
+                          label="Email"
+                          name="email"
+                          placeholder="Email"
+                          value={email}
+                          onChange={this.handleChange}
                         />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            name="password"
-                            value={password}
-                            onChange={this.handleChange}
+                        <TextField className={this.state.styling.textField}
+                          id="standard-with-placeholder"
+                          label="Password"
+                          name="password"
+                          placeholder="Password"
+                          value={password}
+                          onChange={this.handleChange}
                         />
-                        <input
-                            type="submit"
-                            value="Login"
-                        />
+                        <Button variant="contained" id="button" type="submit">Log In</Button>
                     </form>
                 </main>
             </div>
