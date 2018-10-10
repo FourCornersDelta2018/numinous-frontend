@@ -55,6 +55,7 @@ class Login extends Component {
                           onChange={this.handleChange}
                         />
                         <Button variant="contained" id="button" type="submit">Log In</Button>
+                        {this.state.success && <Redirect to="/myepic" />}
                     </form>
                 </main>
             </div>
@@ -89,6 +90,11 @@ class Login extends Component {
 				this.setState({
 					errors: json.errors
 				})
+			} else {
+				this.setState({
+					success: true
+				})
+        this.props.history.push('/myepic')
 			}
 			return json
 		})

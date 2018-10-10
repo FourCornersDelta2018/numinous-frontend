@@ -26,6 +26,8 @@ class App extends Component {
                     <Route path="/" component={Home} />
                 </Switch>
                 : <Switch>
+                    <Redirect from="/home" to="/myepic" />
+                    <Route exact path="/myepic" component={MyEpic} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/registration" component={RegistrationPage} />
                     <Route exact path="/login" component={Login} />
