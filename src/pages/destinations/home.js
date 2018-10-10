@@ -23,14 +23,16 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="container">
-                {this.state.destinations.map((destination, index) => {
-                    return (
-                      <Link to={`/destinations/${destination.id}`}>
-                          <DestinationCard destination={this.state.destinations[index]} />
-                      </Link>
-                    )
-                })}
+            <div> <img className="backgroundHome" src="/assets/oldmap.jpg" alt="vintage map"/>
+                <div className="container">
+                    {this.state.destinations.map((destination, index) => {
+                        return (
+                          <Link to={`/destinations/${destination.id}`}>
+                              <DestinationCard destination={this.state.destinations[index]} />
+                          </Link>
+                        )
+                    })}
+                </div>
             </div>
         )
     }

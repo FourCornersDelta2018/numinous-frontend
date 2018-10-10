@@ -21,29 +21,31 @@ class Login extends Component {
     render() {
         let { email, password } = this.state.user
         return (
-            <main className="login">
-                <h4>Sign in with your email and password to see My Epic:</h4>
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        value={email}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        name="password"
-                        value={password}
-                        onChange={this.handleChange}
-                    />
-                    <input
-                        type="submit"
-                        value="Login"
-                    />
-                </form>
-            </main>
+            <div> <img className="backgroundLogin" src="/assets/riceterrace.jpg" alt="rice terrace"/>
+                <main className="login">
+                    <h4>Sign in with your email and password to see My Epic:</h4>
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            name="email"
+                            value={email}
+                            onChange={this.handleChange}
+                        />
+                        <input
+                            type="password"
+                            placeholder="Password"
+                            name="password"
+                            value={password}
+                            onChange={this.handleChange}
+                        />
+                        <input
+                            type="submit"
+                            value="Login"
+                        />
+                    </form>
+                </main>
+            </div>
         )
     }
 
