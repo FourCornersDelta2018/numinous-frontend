@@ -24,7 +24,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="backgroundHome"></div> 
                 <div className="container">
                     {this.state.destinations.map((destination, index) => {
                         return (

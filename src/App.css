@@ -27,9 +27,7 @@
     margin: 2rem;
 }
 
-body {
-    padding-top: 13vh;
-}
+/*______________________Generic Classes________________________________*/
 
 .flex-column {
   display: flex;
@@ -42,6 +40,11 @@ body {
   justify-content: center;
 }
 
+.pullLeft {
+    padding-left: 25px;
+    text-shadow: 1px 1px #2c3840;
+}
+
 /*______________________Navbar________________________________*/
 
 #brand {
@@ -49,7 +52,6 @@ body {
     font-size: 2.5em;
     text-shadow: 1px 1px #2c3840;
     padding-left: 50px;
-
 }
 
 /*_____________________Footer____________________________*/
@@ -58,10 +60,9 @@ body {
     background-color: #1565c0;
     height: 10vh;
     display: flex;
-
     flex-shrink: 0;
     position: fixed;
-
+    /* margin-bottom: 10vh; */
     bottom: 0;
     width: 100vw;
     border-style: solid;
@@ -77,11 +78,6 @@ body {
     width: 80px;
 }
 
-.pullLeft {
-    padding-left: 25px;
-    text-shadow: 1px 1px #2c3840;
-}
-
 /*___________________Home Page__________________________*/
 
 .container {
@@ -95,7 +91,6 @@ body {
     left: 0px;
 }
 
-/* TODO: Change depending on whether we're going with Flex or Material UI */
 .card {
     height: 300px;
     width: 300px;
@@ -132,9 +127,15 @@ body {
     border-width: 2px;
     justify-content: center;
     align-items: center;
-
 }
 
+#showtitle {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 6em;
+    text-shadow: 3px 3px black;
+    padding-left: 50px;
+    color: white;
+}
 
 #attribute-section {
   padding: 3rem 2rem 4rem 2rem;
@@ -160,6 +161,11 @@ body {
   object-fit: scale-down;
   height: 100vh;
   width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .inline {
