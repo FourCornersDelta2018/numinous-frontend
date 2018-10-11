@@ -38,8 +38,7 @@ class RegistrationPage extends Component {
 		let { username, email, password } = this.state.form.user
 		return (
 			<div>
-				<div style={this.state.styling.container} className="backgroundRegister"></div>
-				<div className="backgroundRegister"></div>
+				<div style={this.state.styling.container} id="backgroundRegister"></div>
 				<main className="register">
 					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
 					<form className="flex-column" onSubmit={this.onSubmit}>

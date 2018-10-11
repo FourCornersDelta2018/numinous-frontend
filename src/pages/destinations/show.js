@@ -81,7 +81,7 @@ class Show extends Component {
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
 
         return (
-          <div className="flex-column">
+          <div className="flex-column" style={{flex: "1"}}>
             <div className="background" style={{backgroundImage:`url(${img_path})`}}>
                 <h1 id="showtitle">{dest_name}</h1>
                 <arrow-down class="bounce">
@@ -89,8 +89,8 @@ class Show extends Component {
                 </arrow-down>
             </div>
             <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
-              <h1 style={{marginBottom: "0"}}>{dest_name}</h1>
-              <h4 style={{marginBottom: "2rem"}}>{location}</h4>
+              <h1 id="attribute-title">{dest_name}</h1>
+              <h4 id="attribute-location">{location}</h4>
               <div id="attribute-row">
                 <AttributeCard type="geography" attribute={geography}/>
                 <AttributeCard type="experience" attribute={experience}/>
