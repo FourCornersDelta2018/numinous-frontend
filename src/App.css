@@ -35,6 +35,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  /* background-color: transparent; */
 }
 
 .flex-row {
@@ -77,6 +78,7 @@
     border-style: solid;
     border-width: thin;
     border-color: #2c3840;
+    position: fixed; bottom: 0;
 }
 
 .footer > p {
@@ -98,6 +100,17 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    background-image: url("/assets/island.jpg");
+    background-attachment: fixed;
+    width: auto;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
 }
 
 .card {
@@ -114,22 +127,6 @@
     border-style: solid;
     border-color: #43a047;
     border-radius: 3px;
-}
-
-#backgroundHome {
-    background-image: url("/assets/island.jpg");
-    width: auto;
-    min-height: 100vh;
-    z-index: auto|-1|initial|inherit;
-    background-position: center;
-    /* background-repeat: repeat; */
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    object-fit: scale-down;
-    opacity: 0.5;
 }
 
 /*______________________Show Page___________________________*/
@@ -324,7 +321,8 @@ arrow-down {
 .myepic {
     display: flex;
     flex-direction: row;
-    padding-top: 10vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
 }
 
 .column1 {

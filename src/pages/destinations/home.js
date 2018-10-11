@@ -24,7 +24,6 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div id="backgroundHome"></div>
                 <div className="container" style={{flex: "1"}}>
                     {this.state.destinations.map((destination, index) => {
                         return (
