@@ -27,6 +27,7 @@
     margin: 2rem;
 }
 
+
 /*______________________Generic Classes________________________________*/
 
 .flex-column {
@@ -52,10 +53,20 @@
 #brand {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
-    text-shadow: 1px 1px #2c3840;
+    text-shadow: 3px 3px #2c3840;
     padding-left: 50px;
 }
+#brand:hover {
+    text-shadow: 4px 4px #2c3840;
+}
 
+#tagline {
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 10px;
+    text-shadow: 1px 1px #2c3840;
+}
 /*_____________________Footer____________________________*/
 
 .footer {
@@ -89,7 +100,8 @@
     padding-top: 20vh;
     padding-bottom: 10vh;
     position: absolute;
-    /* background-color: transparent; */
+    z-index: auto|1|initial|inherit;
+    background-color: transparent;
     top: 0px;
     left: 0px;
 }
@@ -103,6 +115,11 @@
     border-color: #2c3840;
     border-radius: 3px;
     box-shadow: 2px 2px 5px #666666;
+}
+.card:hover {
+    border-style: solid;
+    border-color: #43a047;
+    border-radius: 3px;
 }
 
 #backgroundHome {
@@ -330,8 +347,8 @@ container {
 }
 /* ------------------Login----------------------------- */
 .login {
-    padding-top: 100px;
-    padding-left: 25px;
+    padding-top: 120px;
+    padding-left: 75px;
     position: absolute;
     position: fixed;
     top: 0px;
@@ -355,8 +372,8 @@ container {
 
 /* ------------------Register----------------------------- */
 .register {
-    padding-top: 100px;
-    padding-left: 25px;
+    padding-top: 120px;
+    padding-left: 75px;
     position: absolute;
     position: fixed;
     top: 0px;
