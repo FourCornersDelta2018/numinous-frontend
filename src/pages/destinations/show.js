@@ -86,8 +86,8 @@ class Show extends Component {
                 </arrow-down>
             </div>
             <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
-              <h1 style={{marginBottom: "0"}}>{dest_name}</h1>
-              <h4 style={{marginBottom: "2rem"}}>{location}</h4>
+              <h1 id="attribute-title">{dest_name}</h1>
+              <h4 id="attribute-location">{location}</h4>
               <div id="attribute-row">
                 <AttributeCard type="geography" attribute={geography}/>
                 <AttributeCard type="experience" attribute={experience}/>

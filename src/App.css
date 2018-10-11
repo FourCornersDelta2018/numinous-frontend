@@ -35,7 +35,6 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
 }
 
 .flex-row {
@@ -154,7 +153,7 @@
 }
 
 #attribute-section {
-  padding: 3rem 2rem 4rem 2rem;
+  padding: 1rem 2rem 4rem 2rem;
 }
 
 #attribute-row {
@@ -164,6 +163,15 @@
   width: 100vw;
   justify-content: space-around;
   align-items: center;
+}
+
+#attribute-title {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+#attribute-location {
+  margin-bottom: 3rem;
 }
 
 .background {
@@ -254,30 +262,37 @@ arrow-down {
   }
 }
 
+/*--------------Attribute Card-------------*/
+
 .circle {
-  width: 300px;
-  height: 300px;
-  border: 1px solid #1565c0;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #1565c0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 #attribute-icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: auto;
+}
+
+#attribute-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #textbox {
   width: 300px;
   height: auto;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   text-align: center;
 }
-
 
 #destinationShow {
     background-size: cover;
