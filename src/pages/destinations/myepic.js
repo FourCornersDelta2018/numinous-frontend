@@ -10,6 +10,8 @@ class MyEpic extends Component {
         super(props)
         this.state = {
             destinations: [],
+            username: '',
+            destinationInfo: [],
             styling: {
               bigAvatar: {
                 width: 200,
@@ -25,15 +27,19 @@ class MyEpic extends Component {
         getSavedDestinations(current_user_id)
         .then(savedDestinationInfo => {
             console.log(savedDestinationInfo);
-            this.setState({destinations: savedDestinationInfo})
+            this.setState({destinations: savedDestinationInfo.destination_user,
+            username: savedDestinationInfo.user_info.username, destinationInfo: savedDestinationInfo.destination_info })
         })
     }
 
+
+
   render() {
+    console.log("STATE", this.state);
       return (
           <container>
                 <div className="column1">
-                <h2>Welcome, Fatface!</h2>
+                 <h2>Welcome, {this.state.username}!</h2>
                 <Avatar
                   alt="Adelle Charles"
                   src="/assets/avatar.png"
@@ -42,10 +48,10 @@ class MyEpic extends Component {
                 </div>
 
                 <div className="column2"><h2>This is where you would go if you were not broke!</h2>
-                {this.state.destinations.map((destination, index) => {
+                {this.state.destinationInfo.map((destination, index) => {
                     return (
-                        <Link to={{pathname:`/destinations/${destination.destination_id}`, state:{id:destination.id}}}>
-                            <DestinationCard destination={destination.destination} />
+                        <Link to={{pathname:`/destinations/${destination.id}`, state:{id:destination.id}}}>
+                            <DestinationCard destination={destination} />
                         </Link>
                     )
                 })}
