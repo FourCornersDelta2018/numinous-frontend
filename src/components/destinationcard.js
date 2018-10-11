@@ -6,7 +6,7 @@ class DestinationCard extends Component {
         const { dest_name, img_path } = destination
 
         return (
-            <div>
+            <div style={{padding: "1rem"}}>
                 <img className="card"src={img_path} alt={dest_name} />
             </div>
         )
