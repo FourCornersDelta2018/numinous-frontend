@@ -31,17 +31,18 @@ class MyEpic extends Component {
 
   render() {
       return (
-          <container>
+          <div className="myepic">
                 <div className="column1">
-                <h2>Welcome, Fatface!</h2>
+                <h2>Welcome, User!</h2>
                 <Avatar
-                  alt="Adelle Charles"
+                  alt="avatar image"
                   src="/assets/avatar.png"
                   style={this.state.styling.bigAvatar}
                 />
                 </div>
 
-                <div className="column2"><h2>This is where you would go if you were not broke!</h2>
+                <div className="column2">
+                  <h2>Travel Wishlist</h2>
                 {this.state.destinations.map((destination, index) => {
                     return (
                         <Link to={{pathname:`/destinations/${destination.destination_id}`, state:{id:destination.id}}}>
@@ -52,9 +53,9 @@ class MyEpic extends Component {
 
                 </div>
 
-                <div className="column3"><h2>I am wee little icebox column</h2>
+                <div className="column3"><h2>Past Destinations</h2>
                 </div>
-          </container>
+          </div>
       )
   }
 }
