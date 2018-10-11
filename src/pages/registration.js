@@ -69,7 +69,7 @@ class RegistrationPage extends Component {
 						/>
 						{this.state.errors.password && <div>Error: Password  {this.state.errors.password[0]}</div>}
 						<Button variant="contained" id="button" type="submit" onSubmit={this.onSubmit}>Register</Button>
-						{this.state.success && <Redirect to="/pages/destinations/myepic"/>}
+						{this.state.success && <Redirect to="/myepic"/>}
 					</form>
 				</main>
 			</div>
