@@ -48,8 +48,6 @@
     text-shadow: 1px 1px #2c3840;
 }
 
-/*______________________Navbar________________________________*/
-
 #brand {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
@@ -123,9 +121,9 @@
 }
 
 #backgroundHome {
-    background-image: url("/assets/temple.jpg");
+    background-image: url("/assets/island.jpg");
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
     z-index: auto|-1|initial|inherit;
     background-position: center;
     /* background-repeat: repeat; */
@@ -355,10 +353,10 @@ container {
     left: 0px;
 }
 
-.backgroundLogin {
+#backgroundLogin {
     background-image: url("/assets/riceterrace.jpg");
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -379,10 +377,10 @@ container {
     top: 0px;
     left: 0px;
 }
-.backgroundRegister {
+#backgroundRegister {
     background-image: url("/assets/telluride.jpg");
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
     /* background-position: center; */
     background-repeat: no-repeat;
