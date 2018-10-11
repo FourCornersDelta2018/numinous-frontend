@@ -22,9 +22,7 @@ class MyEpic extends Component {
     componentWillMount() {
         let auth = new AuthService()
         let current_user_id = auth.getUserId()
-        console.log(current_user_id);
         getSavedDestinations(current_user_id)
-        //// TODO: review this----------------------------------------------------
         .then(savedDestinationInfo => {
             console.log(savedDestinationInfo);
             this.setState({destinations: savedDestinationInfo})
