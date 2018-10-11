@@ -198,6 +198,9 @@
   display: inline;
 }
 
+#button:hover {
+    background-color: #00701a;
+}
 /*--------------Arrow down-------------*/
 
 arrow-down {
@@ -410,11 +413,10 @@ arrow-down {
     left: 0px;
 }
 
-.backgroundAbout {
-    background-image: url("/assets/beach.jpg");
+/* #about {
+    background-image: url("/assets/oldmap.jpg");
     width: auto;
     height: 100vh;
-    overflow: hidden;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -423,11 +425,7 @@ arrow-down {
     -moz-background-size: cover;
     -o-background-size: cover;
     object-fit: scale-down;
-    opacity: 0.5;
-}
-/* ---------------------TODO----------------------------- */
-
-/* --------------------About Us---------------------------*/
+} */
 
 .logo-section {
   display: flex;
@@ -436,6 +434,7 @@ arrow-down {
   margin: 0 auto;
 }
 .logo-section img {
+    /* padding-top: 10vh; */
   margin-left: 16%;
   margin-right: 16%;
 }
