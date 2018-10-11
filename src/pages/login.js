@@ -21,7 +21,7 @@ class Login extends Component {
             styling: {
               container: {
                 display: 'flex',
-                flexWrap: 'wrap',
+                flexWrap: 'wrap'
               },
               textField: {
                 width: 200

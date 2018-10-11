@@ -35,7 +35,6 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  /* background-color: transparent; */
 }
 
 .flex-row {
@@ -78,7 +77,6 @@
     border-style: solid;
     border-width: thin;
     border-color: #2c3840;
-    position: fixed; bottom: 0;
 }
 
 .footer > p {
@@ -109,8 +107,6 @@
     justify-content: center;
     top: 0px;
     left: 0px;
-    background-image: url("/assets/oldmap.jpg");
-    background-attachment: fixed;
     width: auto;
     min-height: 100vh;
     background-position: center;
@@ -362,7 +358,7 @@ arrow-down {
 }
 /* ------------------Login----------------------------- */
 .login {
-    padding-top: 120px;
+    padding-top: 15%;
     padding-left: 75px;
     position: absolute;
     position: fixed;
@@ -373,8 +369,7 @@ arrow-down {
 #backgroundLogin {
     background-image: url("/assets/riceterrace.jpg");
     width: auto;
-    min-height: 100vh;
-    /* background-position: center; */
+    min-height: 90vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -387,7 +382,7 @@ arrow-down {
 
 /* ------------------Register----------------------------- */
 .register {
-    padding-top: 120px;
+    padding-top: 15%;
     padding-left: 75px;
     position: absolute;
     position: fixed;
@@ -397,9 +392,8 @@ arrow-down {
 #backgroundRegister {
     background-image: url("/assets/telluride.jpg");
     width: auto;
-    min-height: 100vh;
+    min-height: 90vh;
     overflow: hidden;
-    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
