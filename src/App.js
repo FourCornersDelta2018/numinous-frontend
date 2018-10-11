@@ -15,7 +15,7 @@ class App extends Component {
   render() {
       let auth = new AuthService()
     return (
-      <div>
+      <div className="flex-column">
         <Navbar />
             <Router>
                 {(auth.loggedIn())

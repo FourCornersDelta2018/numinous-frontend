@@ -79,6 +79,7 @@ class Show extends Component {
         return (
           <div className="flex-column">
             <div className="background" style={{backgroundImage:`url(${img_path})`}}>
+                <h1 id="showtitle">{dest_name}</h1>
                 <arrow-down class="bounce">
                   <img width="40" height="40" src="/assets/icon-arrow_dropdown.svg" alt="Down Arrow" />
                 </arrow-down>
