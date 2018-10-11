@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 class DestinationCard extends Component {
     render() {
+      console.log(this.props);
         const { destination } = this.props
         const { dest_name, img_path } = destination
         return (

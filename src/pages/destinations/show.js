@@ -3,6 +3,7 @@ import { getDestination, createDestinationUser, unsaveDestination } from '../../
 import AuthService from '../../services'
 import AttributeCard from '../../components/attributecard'
 import Button from '@material-ui/core/Button';
+import { Redirect } from 'react-router-dom'
 
 class Show extends Component {
     constructor(props) {
@@ -51,6 +52,7 @@ class Show extends Component {
             this.setState({
                 newDestinationUserSuccess: true
             })
+            alert("Destination Saved!")
         })
     }
 
@@ -65,6 +67,7 @@ class Show extends Component {
             this.setState({
                 unsaveDestinationSuccess: true
             })
+            alert("Destination Removed!")
         })
     }
 
@@ -95,8 +98,14 @@ class Show extends Component {
                 {isLoggedIn ? (
                     <div className="flex-row" style={{paddingBottom: "2rem"}}>
                         <Button variant="contained" id="button" type="submit" onClick={this.saveHandleClick}>Save to My Epic</Button>
+                        {this.state.newDestinationUserSuccess && <Redirect to='/myepic' /> }
+
                         <Button variant="contained" id="button" type="submit" onClick={this.unsaveHandleClick}>Remove from My Epic </Button>
-                    </div>
+                          {this.state.unsaveDestinationSuccess  && <Redirect to='/myepic' /> }
+
+
+
+                  </div>
                 ) : (<div></div>) }
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>

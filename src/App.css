@@ -27,6 +27,7 @@
     margin: 2rem;
 }
 
+
 /*______________________Generic Classes________________________________*/
 
 .flex-column {
@@ -34,6 +35,7 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
+  /* background-color: transparent; */
 }
 
 .flex-row {
@@ -41,20 +43,30 @@
   justify-content: center;
 }
 
+/*______________________Navbar____________________________*/
+
 .pullLeft {
     padding-left: 25px;
     text-shadow: 1px 1px #2c3840;
 }
 
-/*______________________Navbar________________________________*/
-
 #brand {
     font-family: 'Kaushan Script', cursive;
     font-size: 2.5em;
-    text-shadow: 1px 1px #2c3840;
+    text-shadow: 3px 3px #2c3840;
     padding-left: 50px;
 }
+#brand:hover {
+    text-shadow: 4px 4px #2c3840;
+}
 
+#tagline {
+    font-size: 11px;
+    font-style: italic;
+    text-align: right;
+    padding-right: 10px;
+    text-shadow: 1px 1px #2c3840;
+}
 /*_____________________Footer____________________________*/
 
 .footer {
@@ -66,6 +78,7 @@
     border-style: solid;
     border-width: thin;
     border-color: #2c3840;
+    position: fixed; bottom: 0;
 }
 
 .footer > p {
@@ -73,7 +86,7 @@
 }
 
 .logo {
-    width: 80px;
+    width: 65px;
 }
 
 /*___________________Home Page__________________________*/
@@ -96,6 +109,17 @@
     justify-content: center;
     top: 0px;
     left: 0px;
+    background-image: url("/assets/island.jpg");
+    background-attachment: fixed;
+    width: auto;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
 }
 
 .card {
@@ -108,20 +132,10 @@
     border-radius: 3px;
     box-shadow: 2px 2px 5px #666666;
 }
-
-.backgroundHome {
-    background-image: url("/assets/temple.jpg");
-    width: auto;
-    height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    object-fit: scale-down;
-    opacity: 0.5;
+.card:hover {
+    border-style: solid;
+    border-color: #43a047;
+    border-radius: 3px;
 }
 
 /*______________________Show Page___________________________*/
@@ -310,10 +324,14 @@ arrow-down {
 
 /* -----------------MyEpic------------------*/
 
+/* <<<<<<< HEAD */
+
+/* container { */
 .myepic {
     display: flex;
     flex-direction: row;
-    padding-top: 10vh;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
 }
 
 .column1 {
@@ -341,18 +359,18 @@ arrow-down {
 }
 /* ------------------Login----------------------------- */
 .login {
-    padding-top: 100px;
-    padding-left: 25px;
+    padding-top: 120px;
+    padding-left: 75px;
     position: absolute;
     position: fixed;
     top: 0px;
     left: 0px;
 }
 
-.backgroundLogin {
+#backgroundLogin {
     background-image: url("/assets/riceterrace.jpg");
     width: auto;
-    height: 100vh;
+    min-height: 100vh;
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -366,18 +384,18 @@ arrow-down {
 
 /* ------------------Register----------------------------- */
 .register {
-    padding-top: 100px;
-    padding-left: 25px;
+    padding-top: 120px;
+    padding-left: 75px;
     position: absolute;
     position: fixed;
     top: 0px;
     left: 0px;
 }
-.backgroundRegister {
+#backgroundRegister {
     background-image: url("/assets/telluride.jpg");
     width: auto;
-    height: 100vh;
-    overflow-x: hidden;
+    min-height: 100vh;
+    overflow: hidden;
     /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
