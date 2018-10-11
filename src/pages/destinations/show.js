@@ -36,7 +36,10 @@ class Show extends Component {
         const id = this.props.match.params.id
         getDestination(id)
         .then(destinationInfo => {
-            this.setState({user_id:current_user_id, destination_id:id, destination:destinationInfo.destination, geography:destinationInfo.geography.geography, experience:destinationInfo.experience.experience, language:destinationInfo.language.language})
+          let {destination, geography, experience, language} = destinationInfo
+          console.log("Response");
+          console.log(destinationInfo);
+            this.setState({user_id:current_user_id, destination_id:id, destination:destination, geography:geography.geography, experience:experience.experience, language:language.language})
         })
         window.scrollTo(0, 0)
     }
