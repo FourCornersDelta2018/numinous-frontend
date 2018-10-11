@@ -42,7 +42,7 @@ class Login extends Component {
                           id="standard-with-placeholder"
                           label="Email"
                           name="email"
-                          placeholder="Email"
+                          type="email"
                           value={email}
                           onChange={this.handleChange}
                         />
@@ -50,7 +50,7 @@ class Login extends Component {
                           id="standard-with-placeholder"
                           label="Password"
                           name="password"
-                          placeholder="Password"
+                          type="password"
                           value={password}
                           onChange={this.handleChange}
                         />
