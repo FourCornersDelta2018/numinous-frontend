@@ -323,14 +323,23 @@ arrow-down {
 
 /* -----------------MyEpic------------------*/
 
-/* <<<<<<< HEAD */
-
-/* container { */
 .myepic {
     display: flex;
     flex-direction: row;
     padding-top: 15vh;
     padding-bottom: 10vh;
+}
+
+#epic-text {
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+  font-size: 3em;
+  text-shadow: 3px 1px #2c3840;
+  max-width: 300px;
+  position: relative;
+  text-align: center;
+  transform: translate(0, -400%);
+  -ms-transform: translate(0, -500%);
 }
 
 .column1 {
