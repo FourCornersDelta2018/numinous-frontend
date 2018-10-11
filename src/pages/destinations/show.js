@@ -39,6 +39,7 @@ class Show extends Component {
             console.log(current_user_id);
             this.setState({user_id:current_user_id, destination_id:id, destination:destinationInfo.destination, geography:destinationInfo.geography.geography, experience:destinationInfo.experience.experience, language:destinationInfo.language.language})
         })
+        window.scrollTo(0, 0)
     }
 
     saveHandleClick = (e) => {
