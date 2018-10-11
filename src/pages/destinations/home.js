@@ -164,49 +164,49 @@ class Home extends Component {
                     {this.state.destinations.map((destination, index) => {
                       if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language===destination.language) {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language==="All") {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography===destination.geography && this.state.experience==="All" && this.state.language===destination.language) {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language==="All") {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography===destination.geography && this.state.experience==="All" && this.state.language==="All") {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography==="All" && this.state.experience===destination.experience && this.state.language==="All") {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography==="All" && this.state.experience==="All" && this.state.language===destination.language) {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
                       } else if (this.state.geography==="All" && this.state.experience==="All" && this.state.language==="All") {
                         return (
-                          <Link to={`/destinations/${destination.id}`}>
+                          <Link to={`/destinations/${destination.destination.id}`}>
                             <DestinationCard destination={this.state.destinations[index].destination} />
                           </Link>
                         )
