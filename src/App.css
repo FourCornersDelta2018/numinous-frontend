@@ -32,8 +32,10 @@
 
 .flex-column {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .flex-row {
@@ -72,9 +74,6 @@
     height: 10vh;
     display: flex;
     flex-shrink: 0;
-    position: fixed;
-    /* margin-bottom: 10vh; */
-    bottom: 0;
     width: 100vw;
     border-style: solid;
     border-width: thin;
@@ -98,8 +97,6 @@
     padding-top: 20vh;
     padding-bottom: 10vh;
     position: absolute;
-    z-index: auto|1|initial|inherit;
-    background-color: transparent;
     top: 0px;
     left: 0px;
 }
@@ -306,42 +303,37 @@ arrow-down {
 
 /* -----------------MyEpic------------------*/
 
-/* body {
-    margin-bottom: 20vh;
-} */
+/* <<<<<<< HEAD */
 
-container {
+/* container { */
+.myepic {
     display: flex;
-    justify-content: space-around;
-    padding-top: 100px;
+    flex-direction: row;
+    padding-top: 10vh;
 }
 
 .column1 {
     display: flex;
+    min-height: 80vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     flex-grow: 1;
     text-align: center;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    background-color: #43a047;
-
+    border-right: 1px solid gray;
 }
 
 .column2 {
     flex-grow: 2;
     text-align: center;
+    min-height: 80vh;
 }
 
 .column3 {
     flex-grow: 1;
     text-align: center;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    background-color: #43a047;
+    border-left: 1px solid gray;
+    min-height: 80vh;
 }
 /* ------------------Login----------------------------- */
 .login {

@@ -24,8 +24,12 @@ class Home extends Component {
     render() {
         return (
             <div>
+<<<<<<< HEAD
                 <div id="backgroundHome"></div>
                 <div className="container">
+=======
+                <div className="container" style={{flex: "1"}}>
+>>>>>>> e67e3ab2938b70f7882e68c42bdd9de44960ff4a
                     {this.state.destinations.map((destination, index) => {
                         return (
                           <Link to={`/destinations/${destination.id}`}>
