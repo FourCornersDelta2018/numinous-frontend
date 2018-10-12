@@ -5,25 +5,25 @@ class AttributeCard extends Component {
 
   findIcon = (type, attribute) => {
     if (type==="geography" && attribute==="Sea Cliffs") {
-      return `/assets/icons/${type}/coast.svg`
+      return `/icons/${type}/coast.svg`
     } else if (type==="geography" && attribute==="Sand Dunes") {
-      return `/assets/icons/${type}/dunes.svg`
+      return `/icons/${type}/dunes.svg`
     } else if (type==="geography" && attribute==="Hot Springs") {
-      return `/assets/icons/${type}/hotsprings.svg`
+      return `/icons/${type}/hotsprings.svg`
     } else if (type==="experience" && attribute==="Art/Museums") {
-      return `/assets/icons/${type}/museum.svg`
+      return `/icons/${type}/museum.svg`
     } else if (type==="experience" && attribute==="Spas/Springs") {
-      return `/assets/icons/${type}/spa.svg`
+      return `/icons/${type}/spa.svg`
     } else if (type==="experience" && attribute==="Urban Exploration") {
-      return `/assets/icons/${type}/urbanexploration.svg`
+      return `/icons/${type}/urbanexploration.svg`
     } else if (type==="experience" && attribute==="Fair/Festival") {
-      return `/assets/icons/${type}/festival.svg`
+      return `/icons/${type}/festival.svg`
     } else if (type==="experience" && attribute==="Ancient Ruins") {
-      return `/assets/icons/${type}/ruins.svg`
+      return `/icons/${type}/ruins.svg`
     } else if (type==="language") {
-      return `/assets/icons/${type}/language.svg`
+      return `/icons/${type}/language.svg`
     } else {
-      return `/assets/icons/${type}/${attribute}.svg`
+      return `/icons/${type}/${attribute}.svg`
     }
   }
 
