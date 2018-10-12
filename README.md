@@ -10,6 +10,7 @@ Numinous is a React (frontend) and Rails (backend) app that uses Material UI for
 
 Clone this repo to your local machine using:
 * https://github.com/FourCornersDelta2018/numinous-frontend.git
+
 And
 * https://github.com/FourCornersDelta2018/numinous-backend.git
 
