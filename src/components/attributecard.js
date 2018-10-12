@@ -30,7 +30,8 @@ class AttributeCard extends Component {
     render() {
         const { type, attribute } = this.props
         let icon_path = this.findIcon(type, attribute)
-        let aws_icon_path = `https://s3-us-west-2.amazonaws.com/numinous.images${icon_path}`
+        let uppercase_icon_path = `https://s3-us-west-2.amazonaws.com/numinous.images${icon_path}`
+        let aws_icon_path = uppercase_icon_path.toLowerCase()
 
         return (
           <div id="attribute-card">
