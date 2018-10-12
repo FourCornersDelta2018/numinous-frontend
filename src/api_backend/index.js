@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3001'
+const BASE = 'https://numinous-app.herokuapp.com/'
 
 let getDestinations = function() {
    // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
