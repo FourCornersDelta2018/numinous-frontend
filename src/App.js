@@ -21,14 +21,14 @@ class App extends Component {
                 {(auth.loggedIn())
                 ? <Switch>
                     <Route exact path="/myepic" component={MyEpic} />
-                    <Route exact path="/about" component={About} />
+                    <Route exact path="https://numinous-frontend.herokuapp.com/about" component={About} />
                     <Route exact path="/destinations/:id" component={Show} />
                     <Route path="/" component={Home} />
                 </Switch>
                 : <Switch>
                     <Redirect from="/home" to="/myepic" />
                     <Route exact path="/myepic" component={MyEpic} />
-                    <Route exact path="/about" component={About} />
+                    <Route exact path="https://numinous-frontend.herokuapp.com/about" component={About} />
                     <Route exact path="/registration" component={RegistrationPage} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/destinations/:id" component={Show} />
