@@ -33,7 +33,7 @@ class AttributeCard extends Component {
 
         return (
           <div>
-            <div class="circle">
+            <div className="circle">
               <img id="attribute-icon" src={icon_path} />
               {attribute}
             </div>
