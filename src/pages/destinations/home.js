@@ -39,7 +39,7 @@ class Home extends Component {
              "Landmark",
              "Nature",
              "Oddity",
-             "Spas/Srings",
+             "Spas/Springs",
              "Wineries",
              "Ancient Ruins",
              "Urban Exploration"
