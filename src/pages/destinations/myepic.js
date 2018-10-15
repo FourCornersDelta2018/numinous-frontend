@@ -52,6 +52,7 @@ class MyEpic extends Component {
 
                 <div className="column2">
                   <h2>Travel Wishlist</h2>
+                  <h4>Add destinations to My Epic from the Numinous homepage.</h4>
                  {this.state.destinationInfo.map((destination, index) => {
                     return (
                         <Link to={{pathname:`/destinations/${destination.id}`, state:{id:destination.id}}}>

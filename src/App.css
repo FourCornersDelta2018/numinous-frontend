@@ -367,7 +367,7 @@ arrow-down {
     flex-direction: row;
     padding-top: 3vh;
     padding-bottom: 20vh;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .column1 {
