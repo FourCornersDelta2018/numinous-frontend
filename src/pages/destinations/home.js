@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getDestinations } from '../../api_backend/index.js'
+import { getDestinations, getGeographies, getExperiences, getLanguages } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
 import Filter from '../../components/filter'
 import { Link } from 'react-router-dom'
@@ -12,45 +12,9 @@ class Home extends Component {
            geography: "All",
            experience: "All",
            language: "All",
-           arrayOfGeography: [
-             "Mountains",
-             "City",
-             "Canyon",
-             "Tropical",
-             "Glacier",
-             "Coast",
-             "Beach",
-             "Hot Springs",
-             "Lake",
-             "Island"
-           ],
-           arrayOfExperience: [
-             "Art/Museums",
-             "Fair/Festival",
-             "History",
-             "Landmark",
-             "Nature",
-             "Oddity",
-             "Spas/Springs",
-             "Wineries",
-             "Ancient Ruins",
-             "Urban Exploration"
-           ],
-           arrayOfLanguage: [
-             "Spanish",
-             "Japanese",
-             "English",
-             "German",
-             "Marathi",
-             "Mandarin",
-             "Dzongkha",
-             "Burmese",
-             "Indonesian",
-             "Portuguese",
-             "Italian",
-             "French",
-             "Romansh"
-           ]
+           arrayOfGeography: [],
+           arrayOfExperience: [],
+           arrayOfLanguage: []
        }
    }
 
@@ -59,6 +23,24 @@ class Home extends Component {
        .then(APIdestinations => {
            this.setState({
                destinations: APIdestinations.destinations
+           })
+       })
+       getGeographies()
+       .then(APIGeographies => {
+           this.setState({
+               arrayOfGeography: APIGeographies.geographies[0]
+           })
+       })
+       getExperiences()
+       .then(APIExperiences => {
+           this.setState({
+               arrayOfExperience: APIExperiences.experiences[0]
+           })
+       })
+       getLanguages()
+       .then(APILanguages => {
+           this.setState({
+               arrayOfLanguage: APILanguages.languages[0]
            })
        })
     }
