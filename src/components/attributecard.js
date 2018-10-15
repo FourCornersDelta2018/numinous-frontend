@@ -32,8 +32,8 @@ class AttributeCard extends Component {
         let icon_path = this.findIcon(type, attribute)
 
         return (
-          <div id="attribute-card">
-            <div class="circle">
+          <div>
+            <div className="circle">
               <img id="attribute-icon" src={icon_path} />
               {attribute}
             </div>
