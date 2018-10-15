@@ -106,14 +106,15 @@ class Show extends Component {
     render() {
         const isLoggedIn = this.state.isLoggedIn
         let { destination, geography, experience, language } = this.state
-        let {dest_name, region, country, img_path, nearest_city_weather} = destination
+        let {dest_name, region, country, img_path} = destination
+        let aws_img_path = `https://s3-us-west-2.amazonaws.com/numinous.images${img_path}`
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
         let openWeatherURL = fetch(`https://api.openweathermap.org/data/2.5/weather?q=Baltimore,US&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial`)
 
         return (
           <div className="flex-column" style={{flex: "1"}}>
-            <div className="background" style={{backgroundImage:`url(${img_path})`}}>
+            <div className="background" style={{backgroundImage:`url(${aws_img_path})`}}>
                 <h1 id="showtitle">{dest_name}</h1>
                 <arrow-down class="bounce">
                   <img width="40" height="40" src="/assets/icon-arrow_dropdown.svg" alt="Down Arrow" />
