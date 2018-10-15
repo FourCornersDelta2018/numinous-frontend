@@ -40,7 +40,7 @@ class RegistrationPage extends Component {
 			<div>
 				<div style={this.state.styling.container} id="backgroundRegister"></div>
 				<main className="register">
-					<h4>Welcome! Sign up here to create your own My Epic page:</h4>
+					<h4>Register now to save your favorites to your own Epic.</h4>
 					<form className="flex-column" onSubmit={this.onSubmit}>
 						<TextField className={this.state.styling.textField}
 							id="standard-with-placeholder"

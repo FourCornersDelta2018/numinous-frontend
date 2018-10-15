@@ -37,6 +37,9 @@ class MyEpic extends Component {
   render() {
     console.log("STATE", this.state);
       return (
+          <div>
+          <div id="backgroundMyEpic"></div>
+          <h3 id="epicTitle"> My Epic </h3>
           <div className="myepic">
                 <div className="column1">
                  <h2>Welcome, {this.state.username}!</h2>
@@ -61,6 +64,7 @@ class MyEpic extends Component {
 
                 <div className="column3"><h2>Past Destinations</h2>
                 </div>
+          </div>
           </div>
       )
   }

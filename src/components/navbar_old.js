@@ -44,3 +44,80 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+//from code to be in render on home page or its own component
+
+              // <div id="filter-section">
+              //   <form autoComplete="off">
+              //     <FormControl id="filter">
+              //       <InputLabel>Geography</InputLabel>
+              //       <Select
+              //         open={this.state.open}
+              //         onClose={this.handleClose}
+              //         onOpen={this.handleOpen}
+              //         value={this.state.geography}
+              //         onChange={this.handleChange}
+              //         inputProps={{
+              //           name: 'geography'
+              //         }}
+              //       >
+              //         <MenuItem value="All">
+              //           <em>All</em>
+              //         </MenuItem>
+              //         {this.state.arrayOfGeography.map((geography) => {
+              //             return (
+              //                 <MenuItem value={geography}>{geography}</MenuItem>
+              //             )
+              //         })}
+              //       </Select>
+              //       </FormControl>
+              //       </form>
+              //       <form autoComplete="off">
+              //       <FormControl id="filter">
+              //         <InputLabel>Experience</InputLabel>
+              //           <Select
+              //             open={this.state.open}
+              //             onClose={this.handleClose}
+              //             onOpen={this.handleOpen}
+              //             value={this.state.experience}
+              //             onChange={this.handleChange}
+              //             inputProps={{
+              //               name: 'experience'
+              //             }}
+              //           >
+              //             <MenuItem value="All">
+              //               <em>All</em>
+              //             </MenuItem>
+              //             {this.state.arrayOfExperience.map((experience) => {
+              //                 return (
+              //                     <MenuItem value={experience}>{experience}</MenuItem>
+              //                 )
+              //             })}
+              //           </Select>
+              //         </FormControl>
+              //         </form>
+              //       <form autoComplete="off">
+              //       <FormControl id="filter">
+              //         <InputLabel>Language</InputLabel>
+              //           <Select
+              //             open={this.state.open}
+              //             onClose={this.handleClose}
+              //             onOpen={this.handleOpen}
+              //             value={this.state.language}
+              //             onChange={this.handleChange}
+              //             inputProps={{
+              //               name: 'language'
+              //             }}
+              //           >
+              //             <MenuItem value="All">
+              //               <em>All</em>
+              //             </MenuItem>
+              //             {this.state.arrayOfLanguage.map((language) => {
+              //                 return (
+              //                     <MenuItem value={language}>{language}</MenuItem>
+              //                 )
+              //             })}
+              //           </Select>
+              //         </FormControl>
+              //       </form>
+              //     </div>

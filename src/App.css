@@ -61,7 +61,7 @@
 }
 
 #tagline {
-    font-size: 11px;
+    font-size: 14px;
     font-style: italic;
     text-align: right;
     padding-right: 10px;
@@ -92,11 +92,15 @@
 /*___________________Home Page__________________________*/
 
 #filter-section {
-  padding-top: 15vh;
+  padding-top: 20vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: #003c8f;
+  border-style: solid;
+  border-width: thin;
+  border-color: #2c3840;
 }
 
 #filter {
@@ -107,14 +111,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    top: 0px;
-    left: 0px;
+    position: absolute;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+#backgroundHome {
     background-image: url("/assets/oldmap.jpg");
     background-attachment: fixed;
-    width: auto;
+    min-width: 100%;
+    opacity: 0.6;
     min-height: 100vh;
     background-position: center;
     background-size: cover;
+    position: fixed;
+    z-index: -1;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -327,14 +338,36 @@ arrow-down {
 
 /* -----------------MyEpic------------------*/
 
-/* <<<<<<< HEAD */
+#epicTitle {
+    padding-top: 17vh;
+    font-size: 40px;
+    text-align: center;
+}
 
-/* container { */
+#backgroundMyEpic {
+    background-image: url("/assets/beach.jpg");
+    background-attachment: fixed;
+    min-width: 100%;
+    height: 100vh;
+    opacity: 0.4;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    object-fit: scale-down;
+}
+
 .myepic {
     display: flex;
     flex-direction: row;
-    padding-top: 15vh;
-    padding-bottom: 10vh;
+    padding-top: 3vh;
+    padding-bottom: 20vh;
+    justify-content: space-around;
 }
 
 .column1 {
@@ -414,24 +447,31 @@ arrow-down {
 .about {
     padding-top: 100px;
     padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
 }
 
-/* #about {
-    background-image: url("/assets/oldmap.jpg");
-    width: auto;
+#backgroundAbout {
+    background-image: url("/assets/temple.jpg");
+    background-attachment: fixed;
+    min-width: 100%;
     height: 100vh;
+    opacity: 0.5;
+    z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: fixed;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     object-fit: scale-down;
-} */
+}
 
 .logo-section {
   display: flex;
@@ -452,18 +492,32 @@ section {
 .column-z {
   width: 100%;
   margin: 2px;
+  /* border-style: solid;
+  border-width: thin;
+  border-color: #000; */
 }
 .column-x {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center;
+  background-color: #FFF;
+
 }
+
 .column-y {
   margin: 10px;
   margin: 10px;
   flex-grow: 1;
   flex-shrink: 1;
   width: 50%;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: thin;
+  padding: 2px;
+  border-color: #000;
+  text-align: center;
+
 }
 .column-x img {
   align-items: center;

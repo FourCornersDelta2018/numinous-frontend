@@ -86,81 +86,9 @@ class Home extends Component {
     render() {
         return (
             <div>
-              <div id="filter-section">
-                <form autoComplete="off">
-                  <FormControl id="filter">
-                    <InputLabel>Geography</InputLabel>
-                    <Select
-                      open={this.state.open}
-                      onClose={this.handleClose}
-                      onOpen={this.handleOpen}
-                      value={this.state.geography}
-                      onChange={this.handleChange}
-                      inputProps={{
-                        name: 'geography'
-                      }}
-                    >
-                      <MenuItem value="All">
-                        <em>All</em>
-                      </MenuItem>
-                      {this.state.arrayOfGeography.map((geography) => {
-                          return (
-                              <MenuItem value={geography}>{geography}</MenuItem>
-                          )
-                      })}
-                    </Select>
-                    </FormControl>
-                    </form>
-                    <form autoComplete="off">
-                    <FormControl id="filter">
-                      <InputLabel>Experience</InputLabel>
-                        <Select
-                          open={this.state.open}
-                          onClose={this.handleClose}
-                          onOpen={this.handleOpen}
-                          value={this.state.experience}
-                          onChange={this.handleChange}
-                          inputProps={{
-                            name: 'experience'
-                          }}
-                        >
-                          <MenuItem value="All">
-                            <em>All</em>
-                          </MenuItem>
-                          {this.state.arrayOfExperience.map((experience) => {
-                              return (
-                                  <MenuItem value={experience}>{experience}</MenuItem>
-                              )
-                          })}
-                        </Select>
-                      </FormControl>
-                      </form>
-                    <form autoComplete="off">
-                    <FormControl id="filter">
-                      <InputLabel>Language</InputLabel>
-                        <Select
-                          open={this.state.open}
-                          onClose={this.handleClose}
-                          onOpen={this.handleOpen}
-                          value={this.state.language}
-                          onChange={this.handleChange}
-                          inputProps={{
-                            name: 'language'
-                          }}
-                        >
-                          <MenuItem value="All">
-                            <em>All</em>
-                          </MenuItem>
-                          {this.state.arrayOfLanguage.map((language) => {
-                              return (
-                                  <MenuItem value={language}>{language}</MenuItem>
-                              )
-                          })}
-                        </Select>
-                      </FormControl>
-                    </form>
-                  </div>
+                <div id="backgroundHome"></div>
                 <div className="container" style={{flex: "1"}}>
+                    <h3>Click on locations below to explore the world. Start your own Epic journey by registering today.</h3>
                     {this.state.destinations.map((destination, index) => {
                       if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language===destination.language) {
                         return (
