@@ -81,7 +81,7 @@ class Show extends Component {
         let aws_img_path = `https://s3-us-west-2.amazonaws.com/numinous.images${img_path}`
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
-
+   
         return (
           <div className="flex-column" style={{flex: "1"}}>
             <div className="background" style={{backgroundImage:`url(${aws_img_path})`}}>

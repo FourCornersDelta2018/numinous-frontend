@@ -34,9 +34,11 @@ class AttributeCard extends Component {
         let aws_icon_path = uppercase_icon_path.toLowerCase()
 
         return (
+
           <div id="attribute-card">
             <div class="circle">
               <img id="attribute-icon" src={aws_icon_path} />
+
               {attribute}
             </div>
             <div id="textbox">

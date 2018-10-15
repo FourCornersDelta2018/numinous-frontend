@@ -1,0 +1,5 @@
+// api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial
+
+//Or: 11e423d46efed1fcc46b12f860d39adf
+
+//  curl "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial" > sample-response.js
