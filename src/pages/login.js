@@ -21,7 +21,7 @@ class Login extends Component {
             styling: {
               container: {
                 display: 'flex',
-                flexWrap: 'wrap',
+                flexWrap: 'wrap'
               },
               textField: {
                 width: 200
@@ -34,7 +34,7 @@ class Login extends Component {
         let { email, password } = this.state.user
         return (
             <div>
-                <div style={this.state.styling.container} className="backgroundLogin"></div>
+                <div style={this.state.styling.container} id="backgroundLogin"></div>
                 <main className="login">
                     <h4>Sign in with your email and password to see My Epic:</h4>
                     <form className="flex-column" onSubmit={this.handleSubmit}>

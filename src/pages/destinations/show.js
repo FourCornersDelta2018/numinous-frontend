@@ -3,9 +3,7 @@ import { getDestination, createDestinationUser, unsaveDestination } from '../../
 import AuthService from '../../services'
 import AttributeCard from '../../components/attributecard'
 import Button from '@material-ui/core/Button';
-import sampleResponse from './sample-response'
-import Weather from './weather'
-
+import { Redirect } from 'react-router-dom'
 
 class Show extends Component {
     constructor(props) {
@@ -35,12 +33,13 @@ class Show extends Component {
     componentWillMount() {
         let auth = new AuthService()
         let current_user_id = this.grabUserId()
-        console.log(current_user_id);
         const id = this.props.match.params.id
         getDestination(id)
         .then(destinationInfo => {
-            console.log(current_user_id);
-            this.setState({user_id:current_user_id, destination_id:id, destination:destinationInfo.destination, geography:destinationInfo.geography.geography, experience:destinationInfo.experience.experience, language:destinationInfo.language.language})
+          let {destination, geography, experience, language} = destinationInfo
+          console.log("Response");
+          console.log(destinationInfo);
+            this.setState({user_id:current_user_id, destination_id:id, destination:destination, geography:geography.geography, experience:experience.experience, language:language.language})
         })
         window.scrollTo(0, 0)
     }
@@ -67,6 +66,7 @@ class Show extends Component {
             this.setState({
                 newDestinationUserSuccess: true
             })
+            alert("Destination Saved!")
         })
     }
 
@@ -81,6 +81,7 @@ class Show extends Component {
             this.setState({
                 unsaveDestinationSuccess: true
             })
+            alert("Destination Removed!")
         })
     }
 
@@ -111,7 +112,7 @@ class Show extends Component {
         let openWeatherURL = fetch(`https://api.openweathermap.org/data/2.5/weather?q=Baltimore,US&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial`)
 
         return (
-          <div className="flex-column">
+          <div className="flex-column" style={{flex: "1"}}>
             <div className="background" style={{backgroundImage:`url(${img_path})`}}>
                 <h1 id="showtitle">{dest_name}</h1>
                 <arrow-down class="bounce">
@@ -119,8 +120,8 @@ class Show extends Component {
                 </arrow-down>
             </div>
             <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
-              <h1 style={{marginBottom: "0"}}>{dest_name}</h1>
-              <h4 style={{marginBottom: "2rem"}}>{location}</h4>
+              <h1 id="attribute-title">{dest_name}</h1>
+              <h4 id="attribute-location">{location}</h4>
               <div id="attribute-row">
                 <AttributeCard type="geography" attribute={geography}/>
                 <AttributeCard type="experience" attribute={experience}/>
@@ -135,8 +136,14 @@ class Show extends Component {
                 {isLoggedIn ? (
                     <div className="flex-row" style={{paddingBottom: "2rem"}}>
                         <Button variant="contained" id="button" type="submit" onClick={this.saveHandleClick}>Save to My Epic</Button>
+                        {this.state.newDestinationUserSuccess && <Redirect to='/myepic' /> }
+
                         <Button variant="contained" id="button" type="submit" onClick={this.unsaveHandleClick}>Remove from My Epic </Button>
-                    </div>
+                          {this.state.unsaveDestinationSuccess  && <Redirect to='/myepic' /> }
+
+
+
+                  </div>
                 ) : (<div></div>) }
                 <iframe id="map" src={googleMapURL} allowfullscreen></iframe>
           </div>

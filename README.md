@@ -10,6 +10,7 @@ Numinous is a React (frontend) and Rails (backend) app that uses Material UI for
 
 Clone this repo to your local machine using:
 * https://github.com/FourCornersDelta2018/numinous-frontend.git
+
 And
 * https://github.com/FourCornersDelta2018/numinous-backend.git
 
@@ -17,6 +18,7 @@ In the frontend, run the following commands:
 * yarn add material-ui
 * yarn add @material-ui/core
 * yarn add jwt-decode
+
 In the backend, run the following commands:
 * gem install bundle
 * rails db:create
@@ -27,9 +29,11 @@ In the backend, run the following commands:
 # FOUR CORNERS
 
 From the four corners of the United States, Four Corners: Queer Eye for the Straight Girl is comprised of four lovely Delta Unicorns, all (soon-to-be) graduates of the LEARN Academy in San Diego. Our synergy, camaraderie, and distinct but complementary perspectives are what make us thrive. Four Corners is excited to add value and diversity to San Diego.
+
 We are:
 * Caitlin Johnson
 * Tricia Sykes
 * Sarah Proctor
 * Kevin Kochanski
+
 Feel free to contact us with any questions at Cornerscornerscornerscorners@gmail.com
