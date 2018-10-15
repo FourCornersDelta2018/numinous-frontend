@@ -14,7 +14,7 @@ class Filter extends Component {
   }
 
   handleChange = event => {
-    this.props.updateFilterValues(event.target.name, event.target.value )
+    this.props.updateFilterValues(event.target.name, event.target.value)
     this.setState({ attribute: event.target.value });
   };
 
