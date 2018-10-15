@@ -7,12 +7,28 @@ class About extends Component {
         <br />
         <br />
         <br />
+        <br />
+        <br />
+        <br />
+          <div className="logo-section">
+            <div className="column-x">
+              <a id="about-numinous">
+                About Numinous
+              </a>
+              <p>Numinous is a visual experience, allowing you to explore the roads less traveled by discovering unsung destinations the world over. The Numinous home page immediately invites exploration by presenting an enticing photo gallery of these destinations with no labels. Click on a photo to learn more about that destination, including high level attributes that help define the experience that destination offers.
+              <br />
+              <br />
+              At the heart of the Numinous is the My Epic page. As a registered user, you can add any location to your own list of dream destinations to create a scrapbook of travel goals, or edit that list by removing saved desinations. Once a robust My Epic page is created, an understanding of what is important in your next vacation will begin to materialize. Return to the home page and filter the opening gallery by attributes to continue to build your own Epic.</p>
+            </div>
+          </div>
+          <br />
+          <hr width="740px" color="#1565c0"></hr>
           <div className="logo-section">
             <div className="column-z">
               <img src="/assets/teamphotos/FourCornersCrop.jpg" alt="logo"/>
             </div>
             <div className="column-x">
-              <p>From the four corners of the United States, Four Corners: Queer Eye for the Straight Girl is comprised of four lovely Delta Unicorns, all (soon-to-be) graduates of the LEARN Academy in San Diego, CA. Our synergy, cameraderie, and distinct but complementary perspectives are what make us thrive. Four Corners is excited to add value and diversity to San Diego.</p>
+              <p>From the four corners of the United States, Four Corners: Queer Eye for the Straight Girl is comprised of four lovely Delta Unicorns, all (soon-to-be) graduates of the LEARN Academy in San Diego, CA. Our synergy, camaraderie, and distinct but complementary perspectives are what make us thrive. Four Corners is excited to add value and diversity to San Diego.</p>
             </div>
           </div>
           <section>

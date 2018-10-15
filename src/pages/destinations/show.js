@@ -44,6 +44,17 @@ class Show extends Component {
         window.scrollTo(0, 0)
     }
 
+// component did mount: should
+    componentDidMount() {
+      this.currentWeather();
+      this.state = {weather: []}
+    }
+
+    currentWeather() {
+      fetch('https://api.openweathermap.org/data/2.5/weather?q=Baltimore,US&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial')
+      .then(({ results }) => this.setState({ weather: results }));
+    }
+
     saveHandleClick = (e) => {
         e.preventDefault()
         console.log("newDestinationUser try", this.state.user_id, this.state.destination_id);
@@ -74,12 +85,31 @@ class Show extends Component {
         })
     }
 
+    // getWeather = async (e) => {
+    //     e.preventDefault();
+    //     const api_call = await
+    //     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${dest_name},${country}&appid=8a204aa936a993070f63187bde5c0683&units=imperial`);
+    //     const data = await api_call.json();
+    //     if (dest_name && country) {
+    //       this.setState({
+    //         temperature: data.main.temp,
+    //         description: data.weather[0].description,
+    //       });
+    //     } else {
+    //       this.setState({
+    //         temperature: undefined,
+    //         description: undefined,
+    //       });
+    //     }
+    //   }
+
     render() {
         const isLoggedIn = this.state.isLoggedIn
         let { destination, geography, experience, language } = this.state
-        let {dest_name, region, country, img_path} = destination
+        let {dest_name, region, country, img_path, nearest_city_weather} = destination
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
+        let openWeatherURL = fetch(`https://api.openweathermap.org/data/2.5/weather?q=Baltimore,US&APPID=11e423d46efed1fcc46b12f860d39adf&units=imperial`)
 
         return (
           <div className="flex-column" style={{flex: "1"}}>
@@ -96,6 +126,11 @@ class Show extends Component {
                 <AttributeCard type="geography" attribute={geography}/>
                 <AttributeCard type="experience" attribute={experience}/>
                 <AttributeCard type="language" attribute={language}/>
+              </div>
+              <div id="weather-section">
+                <Weather />
+                <h3 src={openWeatherURL}>Current Temperature in {dest_name}: </h3>
+                <h3>Current Conditions: </h3>
               </div>
             </div>
                 {isLoggedIn ? (
