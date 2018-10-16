@@ -2,7 +2,8 @@ import decode from 'jwt-decode'
 
 export default class AuthService {
 	constructor(domain) {
-		this.domain = domain || 'https://numinous-app.herokuapp.com/'
+		// this.domain = domain || 'https://numinous-app.herokuapp.com/'
+		this.domain = domain || 'http://localhost:3001'
 	}
 
 	login = (email, password) => {
