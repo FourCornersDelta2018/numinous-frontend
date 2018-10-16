@@ -89,11 +89,14 @@ class RegistrationPage extends Component {
 		console.log(password);
 		if (password.length < 6) {
 			alert ("Password must have at least six characters, jerk!")
+
 		} else if(!hasNumber.test(password)) {
 			alert ("Password must have a number, jerk!")
+
 		} else if(password === email) {
 			alert ("Password cannot be email, jerk!")
-		}
+
+		} else {
 
 		this.auth.register(this.state.form)
 		.then(json => {
@@ -111,5 +114,5 @@ class RegistrationPage extends Component {
 		})
 	}
 }
-
+}
 export default RegistrationPage

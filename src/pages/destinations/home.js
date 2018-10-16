@@ -1,64 +1,20 @@
 import React, { Component } from 'react'
-import { getDestinations } from '../../api_backend/index.js'
+import { getDestinations, getGeographies, getExperiences, getLanguages } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
+import Filter from '../../components/filter'
 import { Link } from 'react-router-dom'
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
-
 
 class Home extends Component {
     constructor(props){
        super(props)
        this.state = {
            destinations: [],
-           geographyOpen: false,
-           experienceOpen: false,
-           languageOpen: false,
            geography: "All",
            experience: "All",
            language: "All",
-           arrayOfGeography: [
-             "Mountains",
-             "City",
-             "Canyon",
-             "Tropical",
-             "Glacier",
-             "Coast",
-             "Beach",
-             "Hot Springs",
-             "Lake",
-             "Island"
-           ],
-           arrayOfExperience: [
-             "Art/Museums",
-             "Fair/Festival",
-             "History",
-             "Landmark",
-             "Nature",
-             "Oddity",
-             "Spas/Srings",
-             "Wineries",
-             "Ancient Ruins",
-             "Urban Exploration"
-           ],
-           arrayOfLanguage: [
-             "Spanish",
-             "Japanese",
-             "English",
-             "German",
-             "Marathi",
-             "Mandarin",
-             "Dzongkha",
-             "Burmese",
-             "Indonesian",
-             "Portuguese",
-             "Italian",
-             "French",
-             "Romansh"
-           ]
+           arrayOfGeography: [],
+           arrayOfExperience: [],
+           arrayOfLanguage: []
        }
    }
 
@@ -69,73 +25,95 @@ class Home extends Component {
                destinations: APIdestinations.destinations
            })
        })
+       getGeographies()
+       .then(APIGeographies => {
+           this.setState({
+               arrayOfGeography: APIGeographies.geographies[0]
+           })
+       })
+       getExperiences()
+       .then(APIExperiences => {
+           this.setState({
+               arrayOfExperience: APIExperiences.experiences[0]
+           })
+       })
+       getLanguages()
+       .then(APILanguages => {
+           this.setState({
+               arrayOfLanguage: APILanguages.languages[0]
+           })
+       })
     }
 
-    handleChange = event => {
-      this.setState({ [event.target.name]: event.target.value });
-    };
-
-    handleClose = event => {
-      this.setState({ [event.target.name]: event.target.value });
-    };
-
-    handleOpen = event => {
-      this.setState({ [event.target.name]: event.target.value });
-    };
+    updateFilterValues = (attribute, value) => {
+      this.setState({[attribute]: value})
+    }
 
     render() {
+      let {arrayOfGeography, arrayOfExperience, arrayOfLanguage, destinations, geography, experience, language} = this.state
         return (
             <div>
+<<<<<<< HEAD
                 <div id="backgroundHome"></div>
                 <div className="container" style={{flex: "1"}}>
                     <h3>Click on locations below to explore the world. Start your own Epic journey by registering today.</h3>
                     {this.state.destinations.map((destination, index) => {
                       if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language===destination.language) {
+=======
+              <div id="filter-section">
+                <Filter attribute="Geography" array={arrayOfGeography} updateFilterValues={this.updateFilterValues}/>
+                <Filter attribute="Experience" array={arrayOfExperience} updateFilterValues={this.updateFilterValues}/>
+                <Filter attribute="Language" array={arrayOfLanguage} updateFilterValues={this.updateFilterValues}/>
+              </div>
+                <div className="container" style={{flex: "1"}}>
+                    {destinations.map((destination, index) => {
+                      if (geography===destination.geography && experience===destination.experience && language===destination.language) {
+>>>>>>> 7ca7a63a6abba982c6a460fcc746eb2c79052fd5
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language==="All") {
+                      } else if (geography===destination.geography && experience===destination.experience && language==="All") {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography===destination.geography && this.state.experience==="All" && this.state.language===destination.language) {
+                      } else if (geography===destination.geography && experience==="All" && language===destination.language) {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography===destination.geography && this.state.experience===destination.experience && this.state.language==="All") {
+                      } else if (geography===destination.geography && experience===destination.experience && language==="All") {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography===destination.geography && this.state.experience==="All" && this.state.language==="All") {
+                      } else if (geography===destination.geography && experience==="All" && language==="All") {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography==="All" && this.state.experience===destination.experience && this.state.language==="All") {
+                      } else if (geography==="All" && experience===destination.experience && language==="All") {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography==="All" && this.state.experience==="All" && this.state.language===destination.language) {
+                      } else if (geography==="All" && experience==="All" && language===destination.language) {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
-                      } else if (this.state.geography==="All" && this.state.experience==="All" && this.state.language==="All") {
+                      } else if (geography==="All" && experience==="All" && language==="All") {
                         return (
                           <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={this.state.destinations[index].destination} />
+                            <DestinationCard destination={destinations[index].destination} />
                           </Link>
                         )
                       }

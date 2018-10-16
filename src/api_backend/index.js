@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3001'
+const BASE = 'https://numinous-app.herokuapp.com/'
 
 let getDestinations = function() {
    // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
@@ -56,6 +56,36 @@ let unsaveDestination = function(id) {
     })
 }
 
+let getGeographies = function() {
+   // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
+   return fetch(BASE + '/geo_attributes') // this would be equivalent to going to localhost:3001/destinations in your browser. Do that - - what do you see?
+       .then((resp) => {
+           // resp will be whatever you saw on the page localhost:3001/destinations, it is the result of our fetch call
+           let json = resp.json()
+           return json
+       })
+}
+
+let getExperiences = function() {
+   // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
+   return fetch(BASE + '/exp_attributes') // this would be equivalent to going to localhost:3001/destinations in your browser. Do that - - what do you see?
+       .then((resp) => {
+           // resp will be whatever you saw on the page localhost:3001/destinations, it is the result of our fetch call
+           let json = resp.json()
+           return json
+       })
+}
+
+let getLanguages = function() {
+   // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
+   return fetch(BASE + '/lang_attributes') // this would be equivalent to going to localhost:3001/destinations in your browser. Do that - - what do you see?
+       .then((resp) => {
+           // resp will be whatever you saw on the page localhost:3001/destinations, it is the result of our fetch call
+           let json = resp.json()
+           return json
+       })
+}
+
 export  {
-   getDestinations, getDestination, createDestinationUser, getSavedDestinations, unsaveDestination
+   getDestinations, getDestination, createDestinationUser, getSavedDestinations, unsaveDestination, getGeographies, getExperiences, getLanguages
 }
