@@ -38,7 +38,6 @@ class AttributeCard extends Component {
           <div id="attribute-card">
             <div class="circle">
               <img id="attribute-icon" src={aws_icon_path} />
-
               {attribute}
             </div>
             <div id="textbox">
