@@ -76,12 +76,12 @@ class Show extends Component {
 
     render() {
         const isLoggedIn = this.state.isLoggedIn
-        let { destination, geography, experience, language } = this.state
-        let {dest_name, region, country, img_path} = destination
+        let { destination, geography, experience, language} = this.state
+        let {dest_name, region, country, img_path, description} = destination
         let aws_img_path = `https://s3-us-west-2.amazonaws.com/numinous.images${img_path}`
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
-   
+
         return (
           <div className="flex-column" style={{flex: "1"}}>
             <div className="background" style={{backgroundImage:`url(${aws_img_path})`}}>
@@ -93,6 +93,7 @@ class Show extends Component {
             <div id="attribute-section" className="flex-column" style={{alignItems: "center"}}>
               <h1 id="attribute-title">{dest_name}</h1>
               <h4 id="attribute-location">{location}</h4>
+              <p id="location-description">{description}</p>
               <div id="attribute-row">
                 <AttributeCard type="geography" attribute={geography}/>
                 <AttributeCard type="experience" attribute={experience}/>

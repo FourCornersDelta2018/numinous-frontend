@@ -190,7 +190,7 @@
 }
 
 #attribute-location {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .background {
@@ -308,6 +308,12 @@ arrow-down {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#location-description {
+  text-align: center;
+  color: black;
+  padding: 0rem 4rem 3rem 4rem;
 }
 
 #textbox {
