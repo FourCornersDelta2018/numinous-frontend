@@ -8,6 +8,7 @@
     "contentful": "^7.0.4",
     "jquery": "^3.3.1",
     "jwt-decode": "^2.2.0",
+    "lodash.uniq": "^4.5.0",
     "material-ui": "^1.0.0-beta.47",
     "material-ui-icons": "^1.0.0-beta.36",
     "react": "^16.5.2",

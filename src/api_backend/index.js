@@ -1,5 +1,6 @@
 const BASE = 'https://numinous-app.herokuapp.com'
 
+
 let getDestinations = function() {
    // the function name getDestinations is intended to remind you of the restful rails route --> GET '/destinations'.
    return fetch(BASE + '/destinations') // this would be equivalent to going to localhost:3001/destinations in your browser. Do that - - what do you see?

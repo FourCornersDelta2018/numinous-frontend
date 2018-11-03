@@ -4,6 +4,8 @@ import { getSavedDestinations } from '../../api_backend/index.js'
 import DestinationCard from '../../components/destinationcard'
 import { Link } from 'react-router-dom'
 import Avatar from '@material-ui/core/Avatar';
+import uniq from 'lodash'
+import _ from 'lodash'
 
 class MyEpic extends Component {
     constructor(props) {
@@ -54,7 +56,7 @@ class MyEpic extends Component {
                 </div>
                 <div className="column2">
                   <h2>Travel Wishlist</h2>
-                  <h4>Add destinations to My Epic from the Numinous homepage.</h4>
+                  <h4>Add destinations to My Epic from the <Link to="/" className="epic-link">Numinous</Link> homepage.</h4>
                  {this.state.destinationInfo.map((destination, index) => {
                     return (
                       <div>
