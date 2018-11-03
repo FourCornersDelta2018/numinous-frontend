@@ -31,7 +31,7 @@ class Filter extends Component {
     let lowerCaseAttribute = attribute.toLowerCase()
     return (
       <form autoComplete="off">
-        <FormControl id="filter">
+        <FormControl id="filter-section">
           <InputLabel>{attribute}</InputLabel>
           <Select
             open={this.state.open}
