@@ -95,10 +95,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #003c8f;
+  background-color: #1565c0;
   border-style: solid;
   border-width: thin;
   border-color: #2c3840;
+  color: white
+
 }
 
 #filter {
@@ -111,9 +113,16 @@
     justify-content: center;
 <<<<<<< HEAD
     position: absolute;
-    padding-top: 20vh;
+    padding-top: 5vh;
     padding-bottom: 20vh;
 }
+.container-blurb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    color: black;
+  }
 
 #backgroundHome {
     background-image: url("/assets/oldmap.jpg");
@@ -150,6 +159,15 @@
     border-color: #43a047;
     border-radius: 3px;
 }
+
+.reg-link, .epic-link {
+  color: black;
+}
+.reg-link:hover, .epic-link:hover {
+  color: #1565c0;
+  font-weight: bold;
+}
+
 
 /*______________________Show Page___________________________*/
 

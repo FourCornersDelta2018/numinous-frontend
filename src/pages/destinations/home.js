@@ -59,8 +59,10 @@ class Home extends Component {
                 <Filter attribute="Experience" array={arrayOfExperience} updateFilterValues={this.updateFilterValues}/>
                 <Filter attribute="Language" array={arrayOfLanguage} updateFilterValues={this.updateFilterValues}/>
               </div>
+                <div className="container-blurb" style={{flex: "1"}}>
+                <h3>Click on locations below to explore the world. Start your own Epic journey by <Link to="/registration" className="reg-link">registering</Link> today.</h3>
+                </div>
                 <div className="container" style={{flex: "1"}}>
-                <h3>Click on locations below to explore the world. Start your own Epic journey by registering today.</h3>
                     {destinations.map((destination, index) => {
                       if (geography===destination.geography && experience===destination.experience && language===destination.language) {
                         return (

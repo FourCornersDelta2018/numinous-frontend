@@ -32,7 +32,7 @@ class Filter extends Component {
     return (
       <form autoComplete="off">
         <FormControl id="filter">
-          <InputLabel>{attribute}</InputLabel>
+          <InputLabel style={{color:"white", fontSize: "1.5em", fontWeight: "bold", fontFamily: "Mali"}}>{attribute}</InputLabel>
           <Select
             open={this.state.open}
             onClose={this.handleClose}
