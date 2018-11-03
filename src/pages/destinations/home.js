@@ -28,19 +28,19 @@ class Home extends Component {
        getGeographies()
        .then(APIGeographies => {
            this.setState({
-               arrayOfGeography: APIGeographies.geographies[0]
+               arrayOfGeography: APIGeographies.geographies[0].sort()
            })
        })
        getExperiences()
        .then(APIExperiences => {
            this.setState({
-               arrayOfExperience: APIExperiences.experiences[0]
+               arrayOfExperience: APIExperiences.experiences[0].sort()
            })
        })
        getLanguages()
        .then(APILanguages => {
            this.setState({
-               arrayOfLanguage: APILanguages.languages[0]
+               arrayOfLanguage: APILanguages.languages[0].sort()
            })
        })
     }
