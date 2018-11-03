@@ -31,7 +31,7 @@ function ButtonAppBar(props) {
             <Typography variant="h6" color="inherit" className={classes.grow}>
               <a id="brand" href="/">Numinous</a>
             </Typography>
-            <h6 id="tagline">/ˈnü-mə-nəs/ adjective: an experience that leaves one fearful <br/> yet fascinated, awed yet attracted, overwhelmed yet inspired</h6>
+            <h6 id="tagline">/ˈnü-mə-nəs/ adjective: an experience that leaves one fearful yet fascinated, awed yet attracted, overwhelmed yet inspired</h6>
           <Menu />
         </Toolbar>
       </AppBar>

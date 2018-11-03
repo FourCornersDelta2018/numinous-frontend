@@ -60,6 +60,8 @@
 }
 
 #tagline {
+    display: flex;
+    width: 40vw;
     font-size: 14px;
     font-style: italic;
     text-align: right;
@@ -90,7 +92,7 @@
 /*___________________Home Page__________________________*/
 
 #filter-section {
-  padding-top: 20vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -111,7 +113,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-<<<<<<< HEAD
     position: absolute;
     padding-top: 5vh;
     padding-bottom: 20vh;
@@ -395,6 +396,7 @@ arrow-down {
     padding-top: 3vh;
     padding-bottom: 20vh;
     justify-content: space-between;
+    width: 100vw;
 }
 
 #epic-text {
@@ -519,10 +521,19 @@ section {
   display: flex;
 }
 
+.about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-content: space-around;
+}
+
 #about-numinous {
   font-family: 'Kaushan Script', cursive;
   color: #1565c0;
   font-size: 30px;
+  flex-direction: column;
 }
 
 .logo-section {
@@ -530,10 +541,12 @@ section {
   flex-direction: column;
   max-width: 740px;
   margin: 0 auto;
+  background-color: #FFF;
+  border-style: solid;
+  border-width: thin;
 }
 
 .logo-section img {
-    /* padding-top: 10vh; */
   margin-left: 16%;
   margin-right: 16%;
 }
@@ -547,8 +560,9 @@ section {
   width: 100%;
   margin-left: 10px;
   margin-right: 10px;
-  text-align: center;
   background-color: #FFF;
+  padding-left: 10px;
+  max-width: 720px;
 }
 
 .column-y {
@@ -560,9 +574,8 @@ section {
   background-color: #FFF;
   border-style: solid;
   border-width: thin;
-  padding: 2px;
+  padding: 10px;
   border-color: #000;
-  text-align: center;
 }
 
 .column-x img {
@@ -575,4 +588,20 @@ section {
   width: 150px;
   float: left;
   margin-right: 10px;
+}
+
+.column-y h3 {
+    font-family: 'Kaushan Script', cursive;
+    color: #1565c0;
+}
+
+@media screen and (max-width: 600px) {
+    #tagline {
+        font-size: 6px;
+        width: 30vw;
+    }
+    #brand {
+        padding-left: 10px;
+        font-size: 1.5em;
+    }
 }

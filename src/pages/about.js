@@ -19,7 +19,6 @@ class About extends Component {
                   </div>
                 </div>
                 <br />
-                <hr width="740px" color="#1565c0"></hr>
                 <div className="logo-section">
                   <div className="column-z">
                     <img src="/assets/teamphotos/FourCornersCrop.jpg" alt="logo"/>
@@ -44,7 +43,7 @@ class About extends Component {
                   <div className="column-y">
                     <img src="/assets/teamphotos/TriciaSykes.jpg" alt="Headshot woman"/>
                     <h3>Tricia Sykes</h3>
-                    <p>Though Born in Boston, Tricia has called California home for most of her life and represents our SouthWest corner. With a degree from UCSD, Tricia brings a passion for change and service to the tech industry from her prior career as a health and wellness coach.</p>
+                    <p>Though Born in Boston, Tricia has called California home for most of her life and represents our SouthWest corner. With a degree from UCSD, Tricia brings a passion for change and service to the tech industry from her prior career as a health and wellness coach. Go Niners!</p>
                   </div>
                   <div className="column-y">
                     <img src="/assets/teamphotos/CaitlinJohnson.jpg" alt="Headshot woman"/>

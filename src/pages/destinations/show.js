@@ -78,7 +78,7 @@ class Show extends Component {
         const isLoggedIn = this.state.isLoggedIn
         let { destination, geography, experience, language} = this.state
         let {dest_name, region, country, img_path, description} = destination
-        let aws_img_path = `https://s3-us-west-2.amazonaws.com/numinous.images${img_path}`
+        let aws_img_path = `https://s3-us-west-2.amazonaws.com/numinous.images/images/${img_path}`
         let location = `${region}, ${country}`
         let googleMapURL = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBigtkQJamzueDT0qt3DZfBjDqqrTWhmOI&q=${dest_name}+${region}+${country}`
 
