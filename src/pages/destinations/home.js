@@ -53,68 +53,68 @@ class Home extends Component {
       let {arrayOfGeography, arrayOfExperience, arrayOfLanguage, destinations, geography, experience, language} = this.state
         return (
             <div>
-                <div id="backgroundHome"></div>
-              <div id="filter-section">
+              <div id="backgroundHome"></div>
+              <div id="filter-section" style={{marginTop: "8vh"}}>
                 <Filter attribute="Geography" array={arrayOfGeography} updateFilterValues={this.updateFilterValues}/>
                 <Filter attribute="Experience" array={arrayOfExperience} updateFilterValues={this.updateFilterValues}/>
                 <Filter attribute="Language" array={arrayOfLanguage} updateFilterValues={this.updateFilterValues}/>
               </div>
-                <div className="container-blurb" style={{flex: "1"}}>
+              <div className="container-blurb">
                 <h3>Click on locations below to explore the world. Start your own Epic journey by <Link to="/registration" className="reg-link">registering</Link> today.</h3>
-                </div>
-                <div className="container" style={{flex: "1"}}>
-                    {destinations.map((destination, index) => {
-                      if (geography===destination.geography && experience===destination.experience && language===destination.language) {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography===destination.geography && experience===destination.experience && language==="All") {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography===destination.geography && experience==="All" && language===destination.language) {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography===destination.geography && experience===destination.experience && language==="All") {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography===destination.geography && experience==="All" && language==="All") {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography==="All" && experience===destination.experience && language==="All") {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography==="All" && experience==="All" && language===destination.language) {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      } else if (geography==="All" && experience==="All" && language==="All") {
-                        return (
-                          <Link to={`/destinations/${destination.destination.id}`}>
-                            <DestinationCard destination={destinations[index].destination} />
-                          </Link>
-                        )
-                      }
-                    })}
-                </div>
+              </div>
+              <div className="container" style={{flex: "1"}}>
+                  {destinations.map((destination, index) => {
+                    if (geography===destination.geography && experience===destination.experience && language===destination.language) {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography===destination.geography && experience===destination.experience && language==="All") {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography===destination.geography && experience==="All" && language===destination.language) {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography===destination.geography && experience===destination.experience && language==="All") {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography===destination.geography && experience==="All" && language==="All") {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography==="All" && experience===destination.experience && language==="All") {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography==="All" && experience==="All" && language===destination.language) {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    } else if (geography==="All" && experience==="All" && language==="All") {
+                      return (
+                        <Link to={`/destinations/${destination.destination.id}`}>
+                          <DestinationCard destination={destinations[index].destination} />
+                        </Link>
+                      )
+                    }
+                  })}
+              </div>
             </div>
         )
     }
